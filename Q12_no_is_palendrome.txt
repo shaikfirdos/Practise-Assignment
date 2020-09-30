@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace no_palindrome_12t
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter a number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int temp = n;
+            int rem, sum = 0;
+            while(n!=0)
+            {
+                rem = n % 10;
+                n = n / 10;
+                sum = sum * 10 + rem;
+            }
+            if(temp==sum)
+            {
+                Console.WriteLine("Given no {0} is Palindrome", temp);
+            }
+            else
+            {
+                Console.WriteLine("Given no {0} is not a Palindrome", temp);
+            }
+            Console.ReadKey();
+        }
+    }
+}

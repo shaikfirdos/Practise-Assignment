@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace print_no
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Display the Numbers from 100 to 200");
+            for(int v=100;v<=200;v++)
+            {
+                Console.WriteLine("v = " + v);
+            }
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prime_no_10th_que
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("print the prime numbers between 2 to 100\n");
+            for(int i=2;i<=100;i++)
+            {
+                if(i%2!=0)
+                {
+                    Console.WriteLine("number {0} is a prime number", i);
+                }
+                
+            }
+            Console.ReadKey();
+        }
+    }
+}
