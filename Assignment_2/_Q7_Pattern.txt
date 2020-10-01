@@ -1,0 +1,21 @@
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter the value of n");
+            n = Convert.ToInt32(Console.ReadLine()); // taking N value in n variable
+            for(int i=n;i>=1;i--)// rows
+            {
+                for(int j=1;j<=i;j++)// columns
+                {
+                    Console.Write("{0}", j); // print the column value wrt row
+                }
+                Console.WriteLine();
+
+            }
+            Console.ReadKey();
+
+        }
+    }
+}

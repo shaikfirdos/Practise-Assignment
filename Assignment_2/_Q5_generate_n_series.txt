@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Q5_generate_n_series
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for(int i=1;i<=n;i++)
+            {
+                Console.WriteLine("Generate the First N term in the series is {0} ", i * i * i);
+            }
+            Console.ReadKey();
+        }
+    }
+}

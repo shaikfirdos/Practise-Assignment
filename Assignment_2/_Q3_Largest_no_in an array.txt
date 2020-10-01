@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Q3_Largest_No
+{
+    class Program
+
+    {
+
+        static int[] arr = { 99, 345, 100, 500, 213, 20, 1000 };
+       
+       static int greatestvalue()
+        {
+            int i;
+            int max = arr[0];
+            for (i = 1; i < arr.Length; i++)
+            
+                if (arr[i] > max)
+               
+                    max = arr[i];
+
+                    return max;
+                
+        }
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Largest No in Given Series is {0} ", greatestvalue());
+            Console.ReadKey(); 
+
+        }
+
+    }
+}

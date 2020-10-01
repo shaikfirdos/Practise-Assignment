@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Q4_armstrong
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int r, sum = 0;
+            Console.WriteLine("Enter the number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int temp = n;
+            while(n!=0)
+            {
+                r = n % 10;
+                sum = sum + (r * r * r);
+                n = n / 10;
+                
+            }
+
+            if (temp == sum)
+            {
+                Console.WriteLine("Given no is a Armstrong");
+            }
+
+            else
+            {
+                Console.WriteLine("Given no is not a Armstrong");
+            }
+                
+
+            Console.ReadKey();
+
+                
+        }
+    }
+}

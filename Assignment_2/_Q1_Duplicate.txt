@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Q1_Duplicate_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[10];
+            Console.WriteLine("enter the value");
+            
+           int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i <= n; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Elements entered are");
+            for (int i = 0; i <= n; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.WriteLine("after removing the elements are");
+            for (int i = 0; i <= n; i++)
+            {
+                for (int j =0; j <= n; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        for (int k = j; k <= n; k++)
+                        {
+                            arr[k] = arr[k + 1];
+
+                        }
+
+                        n--;
+                    }
+                    else
+                    {
+                        j++;
+                    }
+
+
+                }
+            }
+                
+            
+            for(int i =0;i<=n;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.ReadKey();
+        }
+        
+    }
+}

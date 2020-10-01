@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Q6_Prime_No
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            for(int num=2;num<=n;num++)
+            {
+                int f = 0;
+                for(int i=2;i<=num/2;i++)
+                {
+                    if(num%i==0)
+                    {
+                        f++;
+                    }
+                }
+                if (f == 0 && num != 1)
+                    Console.WriteLine("Prime number for given no " +  n  + "series is " + num );
+            }
+            Console.ReadLine();
+        }
+    }
+}
