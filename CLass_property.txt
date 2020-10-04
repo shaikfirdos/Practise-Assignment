@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Clas_pro_Prac2
+{
+    class Account_data_Cus
+    {
+        private int account_no; //Field variable
+        private int ifsc_no; // field variable
+        private string acc_holder_name; //Field variable
+        public string Acc_Holder_name // property
+        {
+            get; set;
+        }
+        public int Account_no//property
+        {
+            get; set;
+        }
+        public int IFSC_code
+        {
+            get; set;
+        }
+    }
+    //main code
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Account_data_Cus a1 = new Account_data_Cus();
+            a1.Acc_Holder_name = "Shaik.Firdos";
+            Console.WriteLine(a1.Acc_Holder_name);
+            a1.Account_no = 124545454;
+            Console.WriteLine(a1.Account_no);
+            a1.IFSC_code = 123455678;
+            Console.WriteLine(a1.IFSC_code);
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _class_Property_Prc
+{
+    class Account_data_Cus
+    {
+        private int account_no; //Field variable
+        private int ifsc_no; // field variable
+        private string acc_holder_name; //Field variable
+        public string Acc_Holder_name // property
+        {
+            get;set;
+        }
+        public int Account_no//property
+        {
+            get;set;
+        }
+        public int IFSC_code
+        {
+            get;set;
+        }
+    }
+     //main code
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Account_data_Cus a2 = new Account_data_Cus();
+            Console.WriteLine("Enter the Account holder name");
+            a2.Acc_Holder_name = Console.ReadLine();
+            Console.WriteLine("Enter the Account Number");
+            a2.Account_no = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the IfSC code");
+            a2.IFSC_code = Convert.ToInt32(Console.ReadLine());
+
+
+
+           
+
+        }
+    }
+}
