@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ass_stack_int_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> MyStack = new Stack<int>();//create an object of stack
+            MyStack.Push(2);//push method takes one parameter or argument
+            MyStack.Push(4);
+            MyStack.Push(6);
+            MyStack.Push(8);
+            MyStack.Push(10);
+            MyStack.Push(12);
+            MyStack.Push(14);
+            MyStack.Push(16);
+            MyStack.Push(18);
+            MyStack.Push(20);
+
+
+            //foreach (int stack in MyStack)
+            //{
+                //Console.WriteLine("The elements of Mystack are :" + stack);
+            //}
+            //Console.WriteLine(MyStack.Push(0));
+
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the stack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+            
+
