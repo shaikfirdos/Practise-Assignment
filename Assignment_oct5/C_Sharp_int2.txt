@@ -1,0 +1,145 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace __Csharp_Stack_Int2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> MyStack = new Stack<int>();//create an object of stack
+            MyStack.Push(2);//push method takes one parameter or argument
+            MyStack.Push(4);
+            MyStack.Push(6);
+            MyStack.Push(8);
+            MyStack.Push(10);
+            MyStack.Push(12);
+            MyStack.Push(14);
+            MyStack.Push(16);
+            MyStack.Push(18);
+            MyStack.Push(20);
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+            Console.WriteLine("================================================================================================");
+
+            Console.WriteLine(MyStack.ElementAt(0));// access the MyStack value using index
+
+            Console.WriteLine(MyStack.Contains(2));// check the data in the MyStack
+            Console.WriteLine(MyStack.Contains(20));
+
+
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the MyStack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+
+            Console.WriteLine("================================================================================================");
+
+
+            MyStack.Push(22);//push method takes one parameter or argument
+            MyStack.Push(42);
+            MyStack.Push(62);
+            MyStack.Push(82);
+            MyStack.Push(30);
+            MyStack.Push(32);
+            MyStack.Push(44);
+            MyStack.Push(56);
+            MyStack.Push(78);
+            MyStack.Push(90);
+            MyStack.Push(55);
+            MyStack.Push(85);
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the MyStack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+
+            Console.WriteLine("================================================================================================");
+
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the MyStack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+
+            Console.WriteLine("================================================================================================");
+
+
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the MyStack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+            Console.WriteLine("================================================================================================");
+
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the MyStack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            foreach (int stack in MyStack)
+            {
+                Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+            Console.WriteLine("The elements after applying pop :" + MyStack.Count());//count the data presnt in MyStack
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
+
+            
+
+        

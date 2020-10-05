@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _list_Assignment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> list = new List<int>();
+            //var list  = new List<int>();
+            list.Add(100);
+            list.Add(200);
+            list.Add(300);
+            list.Add(400);
+            list.Add(500);
+            Console.WriteLine("List Created");
+            foreach(var l1 in list)
+            {
+                Console.WriteLine("The Elements of List are : {0}", l1);
+
+            }
+            //Contains
+            Console.WriteLine("the elements are present are not");
+            Console.WriteLine(list.Contains(100));
+            Console.WriteLine(list.Contains(600));
+            //accessing the list elements by index
+            Console.WriteLine("The list of 1st index is : {0} ", list[0]);
+            Console.WriteLine("The list of 2nd index is : {0} ", list[1]);
+            Console.WriteLine("The list of 3rd index is : {0} ", list[2]);
+            Console.WriteLine("The list of 4th index is : {0} ", list[3]);
+            Console.WriteLine("The list of 5th index is : {0} ", list[4]);
+            //insert(position/index,value)
+            list.Insert(5, 700);
+            list.Insert(6, 800);
+            Console.WriteLine("The list of 6th index is : {0} ", list[5]);
+            Console.WriteLine("The list of 7th index is : {0} ", list[6]);
+            //remove
+            Console.WriteLine("checking for remove method");
+            Console.WriteLine(list.Remove(700));
+            Console.WriteLine(list.Remove(800));
+            Console.ReadKey();
+        }
+    }
+}

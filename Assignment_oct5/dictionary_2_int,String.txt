@@ -1,0 +1,152 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dictionary_2_int_String_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> dictionary = new Dictionary<int, string>(); // <key,value>
+             //add() - to enter or insert the elements to the dictionary
+            dictionary.Add(1, "Banglore");
+            dictionary.Add(2, "Mumbai");
+            dictionary.Add(3, "Pune");
+            dictionary.Add(4, "Hyderabad");
+            dictionary.Add(5, "Chennai");
+            dictionary.Add(6, "Delhi");
+            dictionary.Add(7, "kolkatta");
+            dictionary.Add(8, "ahmedabad");
+            dictionary.Add(9, "Noida");
+            dictionary.Add(10, "thiruvantapuram");
+
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+            //Count()
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+            //get a Dictionary Item using get & set procedure
+            //set the item value
+            Console.WriteLine("=========================================================================================================");
+            dictionary[11] = "Visakapatnam";
+            dictionary[12] = "Anakapallli";
+            dictionary[13] = "Madillapalem";
+            dictionary[14] = "vizianagram";
+
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+            Console.WriteLine("=========================================================================================================");
+            //remove()
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(1));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(2));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(3));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(4));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(5));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(6));
+
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+
+            Console.WriteLine("=========================================================================================================");
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(7));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(8));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(9));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(10));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(11));
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+            Console.WriteLine("=========================================================================================================");
+
+            dictionary[15] = "Bihar";
+            dictionary[16] = "Chattisgarh";
+            dictionary[17] = "Agra";
+            dictionary[18] = "Srikakulam";
+            dictionary[19] = "Mizoram";
+            dictionary[20] = "Assam";
+            dictionary[21] = "Uttarpradesh";
+            dictionary[22] = "Haryana";
+
+           foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+            Console.WriteLine("==========================================================================================================");
+
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(12));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(13));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(14));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(15));
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+
+            Console.WriteLine("==========================================================================================================");
+
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(16));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(17));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(18));
+
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+            Console.WriteLine("==========================================================================================================");
+
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(19));
+            Console.WriteLine("Elements left in the dictionary after removed" + dictionary.Remove(20));
+
+            foreach (KeyValuePair<int, string> check in dictionary)
+            {
+                Console.WriteLine("The elements of Dictionary are :" + check.Key + "   " + check.Value);//accesed the elements in dictionary
+            }
+
+
+            Console.WriteLine("No of Elements present in the dictionary" + "  " + dictionary.Count());
+
+
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+
+
+
+
+    
