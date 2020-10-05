@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<string> MyStack = new Stack<string>();//create an object of stack
+            MyStack.Push("firdos");//push method takes one parameter or argument
+            MyStack.Push("Technical");
+            MyStack.Push("Trainer");
+            MyStack.Push("C# Programming");
+            MyStack.Push("Stack Collection");
+           // foreach(string stack in MyStack)
+             ////{
+            // Console.WriteLine("The elements of Mystack are :" + stack);
+            //}
+            Console.WriteLine("the first occurence " + MyStack.ElementAt(1));//access  the Mystack by using index value
+           
+           Console.WriteLine("The elements after applying pop :" + MyStack.Pop());//Accessing the elements within the Mystack
+           Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+           Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+           Console.WriteLine("The elements after applying pop :" + MyStack.Pop());
+            Console.WriteLine("The Peak Element of the stack is :" + MyStack.Peek());//to find top of the stack
+            Console.WriteLine("The element lift in Mystack after pop operation :" + MyStack);
+
+            Console.WriteLine(MyStack.Contains("Sachin"));
+            Console.WriteLine(MyStack.Contains("firdos"));
+
+            foreach (string stack in MyStack)
+            {
+             Console.WriteLine("The elements of Mystack are :" + stack);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

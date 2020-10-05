@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_Queue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<int> MyQueue = new Queue<int>();//Queue object is created
+            MyQueue.Enqueue(2);
+            MyQueue.Enqueue(4);
+            MyQueue.Enqueue(6);//add the value in queue
+            MyQueue.Enqueue(8);
+            MyQueue.Enqueue(10);
+            MyQueue.Enqueue(12);
+            MyQueue.Enqueue(14);
+            MyQueue.Enqueue(16);
+            MyQueue.Enqueue(18);
+            MyQueue.Enqueue(20);
+
+            foreach (int fir in MyQueue)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir);
+            }
+            Console.WriteLine(MyQueue.Contains(100));// check data present or not, it returns bool value
+            Console.WriteLine(MyQueue.Contains(10));
+
+
+
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());//remove the value in queue
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());
+            Console.WriteLine("Elements left after applying Dequeue method :" + MyQueue.Dequeue());
+            Console.WriteLine("Peek elements of the Queue is :" + MyQueue.Peek());// get the top data in the queue
+         
+            foreach (int fir in MyQueue)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir);
+            }
+
+            Console.WriteLine("The current Elements present in the queue :" + MyQueue.Count());// count the data present in queue
+
+
+            Console.ReadKey();
+
+
+
+
+
+        }
+    }
+}
+    
+
