@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _reg_strt_end_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string test = "DXC_ TECHNOLOGY";
+            if (Regex.IsMatch(test, "^DXC_"))
+            {
+                Console.WriteLine("START MATCHES");
+            }
+            if (Regex.IsMatch(test, "TECHNOLOGY$"))
+            {
+                Console.WriteLine("END MATCHES");
+            }
+            Console.ReadKey();
+        }
+    }
+}

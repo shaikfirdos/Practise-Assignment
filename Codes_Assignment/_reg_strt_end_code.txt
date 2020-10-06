@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _reg_strt_end_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string test = "xxyy";
+            if (Regex.IsMatch(test, "^xx")) 
+            {
+                Console.WriteLine("START MATCHES");
+            }
+            if(Regex.IsMatch(test,"yy$"))
+            {
+                Console.WriteLine("END MATCHES");
+            }
+            Console.ReadKey();
+        }
+    }
+}
