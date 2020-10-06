@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _reg.match_static_method_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = "/content/ASDGRfskAJKL-789-zx.aspx";//i/p string
+            Match match = Regex.Match(input, @"content/([A-Za-z0-9\-]+)\.aspx$", RegexOptions.IgnoreCase);//call Regex.Match
+            if (match.Success)//check the match
+            {
+                string key = match.Groups[1].Value;
+                Console.WriteLine(key);
+
+            }
+            Console.ReadKey();
+        }
+    }
+}

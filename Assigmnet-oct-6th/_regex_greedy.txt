@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _regex_greedy
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string test = "/bird/cat/";
+            //version1 :use lazy "?" (or non -greedy)metacahracter
+            var result1 = Regex.Match(test, "^/.*?/");
+            if(result1.Success)
+            {
+                Console.WriteLine("Non-Greedy :{0} ", result1.Value);
+
+            }
+            //Version 2 : default Regex
+            //version1 :use lazy (or non -greedy)metacahracter
+            var result2 = Regex.Match(test, "^/.*/");
+            if (result2.Success)
+            {
+                Console.WriteLine("Non-Greedy :{0} ", result2.Value);
+
+            }
+            Console.ReadKey();
+        }
+    }
+}

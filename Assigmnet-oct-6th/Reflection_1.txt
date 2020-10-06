@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection;
+
+
+namespace _Csharp_reflection_
+{
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            Type T = typeof(int);//initializing the T as typeofString.(Type==> Datatype)
+            //use of reflections as below
+            //I trying to find wt sort the data related to T
+            Console.WriteLine("Name:{0}", T.Name);//wt type of data ,method and fields
+            Console.WriteLine("FullName:{0}", T.FullName);//wt type of data ,method and fields
+            Console.WriteLine("Namespace:{0}", T.Namespace);//wt type of data ,method and fields
+            Console.WriteLine("BaseType:{0}", T.BaseType);//wt type of data ,method and fields
+
+            int i = 42;
+            System.Type type = i.GetType();//
+            System.Console.WriteLine(type);
+            // example of usese of reflections to obtain full name of the loaded assembly
+            System.Reflection.Assembly info = typeof(System.Int32).Assembly;
+            Console.WriteLine(info);
+
+            
+            Console.ReadKey();
+
+        }
+    }
+}

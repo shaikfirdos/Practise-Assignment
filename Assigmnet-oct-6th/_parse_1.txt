@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _parse_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = "Dot Net 100 Perls";
+            Match match = Regex.Match(input, @"\d+");
+            if(match.Success)//check
+            {
+                int.TryParse(match.Value, out int number);//it access the group of digits  only in a string
+                //show that we have the numbers
+                Console.WriteLine("Numbers:{0},{1}", number, number + 1);
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+
+Example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _parse_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = "Dot Net 1000 Perls";
+            Match match = Regex.Match(input, @"\d+");
+            if(match.Success)//check
+            {
+                int.TryParse(match.Value, out int number);//it access the group of digits  only in a string
+                //show that we have the numbers
+                Console.WriteLine("Numbers:{0},{1}", number, number + 1);
+                Console.ReadKey();
+            }
+        }
+    }
+}
+

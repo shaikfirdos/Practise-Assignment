@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _replace_csharp_regex_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Regex regex = new Regex(@"\d+");//Replace 2 or more pattern with a string
+            string result = regex.Replace("cat 123 456", "bird");
+            Console.WriteLine("Result {0} ", result);
+            Console.ReadKey();
+        }
+    }
+}

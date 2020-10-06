@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _csharp_generic_
+{
+    class Program
+    {
+        class listening<T>
+        {
+            T intresting;
+
+            public listening (T sachin)
+            {
+                this.intresting = sachin;
+            }
+
+            public void be_active()
+            {
+                Console.WriteLine("sachin  sir cls is intresting : {0} ", this.intresting);
+            }
+        }
+        class example<T>//Type parameter <T>
+        {
+            T data; // Type parameter declared
+
+            // a method for class example
+             
+            public example(T check)//check is been assigned to type paraametr
+            {
+                this.data = check;
+            }
+
+            public void Write()//constructor
+            {
+                Console.WriteLine("The passes to the initializer is: {0} ", this.data);
+            }
+
+
+        }
+
+        //Driver method
+        static void Main(string[] args)
+        {
+            // use the generic type example with an integer/string type parameters
+            //instantiating the class example
+            example<int> result = new example<int>(100);
+            example<string> result1 = new example<string>("firdos");
+            example<string> result2 = new example<string>("programming is fun");
+            listening<string> result3 = new listening<string>(" due to his programming");
+            //invoking the method Write() with object created result and result1
+            result.Write();
+            result1.Write();
+            result2.Write();
+            result3.be_active();
+            Console.ReadKey();
+        }
+    }
+}

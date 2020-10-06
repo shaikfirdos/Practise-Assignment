@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _valu_length_index_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Match m = Regex.Match("123 Axxxxy", @"A.*y");
+            if(m.Success)
+            {
+                Console.WriteLine("Value = {0}", m.Value);//represents a separate text
+                Console.WriteLine("Length = {0}", m.Length);//length of the value of the text
+                Console.WriteLine("Index = {0}", m.Index);//where the text begins within the i/p string
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+Example:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _value_length_index_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Match m = Regex.Match("123 Fi7%*#s 3^&$", @"F.*#");
+            if (m.Success)
+            {
+                Console.WriteLine("Value = {0}", m.Value);//represents a separate text
+                Console.WriteLine("Length = {0}", m.Length);//length of the value of the text
+                Console.WriteLine("Index = {0}", m.Index);//where the text begins within the i/p string
+                Console.ReadKey();
+            }
+
+        }
+    }
+}

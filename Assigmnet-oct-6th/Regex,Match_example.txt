@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _regex_link_example
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //step 1: create an object
+            Regex f = new Regex(@"\d+");
+            //step 2: call match on Regex instance
+            Match f2 = f.Match("hello786_@");
+            //step 3: test for success
+            if (f2.Success)
+            {
+                Console.WriteLine("Match Value : {0} ", f2.Value);
+            }
+            Console.ReadKey();
+        }
+    }
+}

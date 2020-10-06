@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+
+namespace _Static_regex_1_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = "/content/WEBTechnology-0786.aspx";//input string 
+            //this calls the static method specified
+            Console.WriteLine(RegexUtil.MatchKey(input));
+            Console.ReadKey();
+        }
+    }
+
+    static class RegexUtil
+    {
+        static Regex _regex = new Regex(@"/content/([a-z0-9\-]+).aspx$");//returns lowercase only with irrespective of stored data ex: input = ABCd ==> output =abcd
+        //<summary>
+        //this returns the key that is matched within the inputs.
+        //<summary>
+        static public string MatchKey(string input)
+        {
+            Match match = _regex.Match(input.ToLower());
+            if (match.Success)
+            {
+                return match.Groups[1].Value;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+}
+

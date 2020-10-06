@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+namespace _regex_options_ignoreCase_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            const string value = "TEST";
+            // ... This ignores the case of the "TE" characters.
+            if (Regex.IsMatch(value, "te..", RegexOptions.IgnoreCase))
+            {
+              
+                Console.WriteLine(true);
+               
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
+
+    
+
+EXAMPLE:-
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace _Ignore_case_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            const string value = "Firdos";
+            // ... This ignores the case of the "TE" characters.
+            if (Regex.IsMatch(value, "..rd..", RegexOptions.IgnoreCase))
+            {
+
+                Console.WriteLine(true);
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
