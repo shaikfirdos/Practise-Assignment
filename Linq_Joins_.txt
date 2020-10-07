@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Employee1_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Implement the LINQ on collections - List Exaamples
+            IList<Employee_data> EmployeeList = new List<Employee_data>
+            {
+                 //4 Students //4 Id // 4 NAme //4 Age //4Batch
+                new Employee_data() {  EmployeeID  = 1, EmployeeName = "Prathyusha", EmployeeSalary = 27000, EmployeeDesignation = "Data_analyst",D_ID =1 },
+                new Employee_data() { EmployeeID  = 2, EmployeeName = "Ramya", EmployeeSalary = 16500, EmployeeDesignation = "HR",D_ID =1  },
+                new Employee_data() { EmployeeID  = 3, EmployeeName = "Sai", EmployeeSalary = 18000, EmployeeDesignation = "Technitian",D_ID =2  },
+                new Employee_data() { EmployeeID  = 4, EmployeeName = "Sravani", EmployeeSalary =10000, EmployeeDesignation = "Sales",D_ID =1},
+                new Employee_data() { EmployeeID  = 5, EmployeeName = "Soel", EmployeeSalary =18000, EmployeeDesignation = "Sales",D_ID =2},
+                new Employee_data() { EmployeeID  = 6, EmployeeName = "Srivani", EmployeeSalary =10800, EmployeeDesignation = "Manager",D_ID =4},
+                new Employee_data() { EmployeeID  = 7, EmployeeName = "Hemakumar", EmployeeSalary =21000, EmployeeDesignation = "Tachnical_lead",D_ID =2},
+                new Employee_data() { EmployeeID  = 8, EmployeeName = "Bhargavi", EmployeeSalary =20000, EmployeeDesignation = "Sales",D_ID =4},
+                new Employee_data() { EmployeeID  = 9, EmployeeName = "Rahul", EmployeeSalary =20000, EmployeeDesignation = "Sales"},
+
+            };
+
+            IList<Department_data> DepartmentList = new List<Department_data>
+            {
+               new Department_data(){DepartmentID = 1, DepartmentName = "CSE" },
+               new Department_data(){DepartmentID=2, DepartmentName="IT" },
+               new Department_data(){DepartmentID =3, DepartmentName ="Payroll"},
+               new Department_data(){DepartmentID=4, DepartmentName="MBA"},
+            };
+           Console.WriteLine("***********************GroupJOIN**********************************************");
+            var data = from d in DepartmentList
+                       join e in EmployeeList
+                       on d.DepartmentID equals e.D_ID
+                       select new
+                       {
+                           D = d.DepartmentName,
+
+                           N = e.EmployeeName
+                       };
+
+            foreach (var z in data)
+            {
+                Console.WriteLine("Deparment : {0}  Employee : {1}", z.D, z.N);
+            }
+
+            Console.WriteLine("***********************InnerJoin**********************************************");
+            var data1 = from e in EmployeeList
+                        join d in DepartmentList
+                        on e.D_ID equals d.DepartmentID
+                        select new { A = e.EmployeeName, B = d.DepartmentID };
+            foreach (var z1 in data1)
+            {
+                Console.WriteLine("EmployeeNAme : {0}  Department : {1}", z1.A, z1.B);
+            }
+
+            Console.WriteLine("***********************LeftOuterJoin**********************************************");
+            var data2 = from e in EmployeeList
+                        join d in DepartmentList
+                        on e.D_ID equals d.DepartmentID
+                        select new
+                        {
+                            C = e.EmployeeName,
+                            S = d.DepartmentName
+
+                        };
+            foreach (var z1 in data2)
+            {
+                Console.WriteLine("EmployeeNAme : {0}  DepartmentName : {1}", z1.C, z1.S);
+            }
+            Console.ReadKey();
+        }
+
+        public class Department_data
+        {
+            public int DepartmentID { get; set; }
+            public string DepartmentName { get; set; }
+            public string Department_Designation { get; set; }
+
+        }
+
+        public class Employee_data
+        {
+            public int EmployeeID { get; set; }
+            public string EmployeeName { get; set; }
+            public int EmployeeSalary { get; set; }
+            public string EmployeeDesignation { get; set; }
+            public int D_ID { get; set; }
+        }
+    }
+}
