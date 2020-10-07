@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Delegate_examp1_
+{
+    public delegate void MyDelegate(string msg); //define a delegate
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDelegate del = new MyDelegate(ClassA.MethodA);
+           //  MyDelegate del = ClassA.MethodA;//set target methodA
+            del("hello world");
+
+            del = ClassB.MethodB;//set target methodB
+            del("hello world");
+
+            del = (string msg) => Console.WriteLine("Called Lambda Expressions : " + msg);//set lambda expression
+            del("hello world");
+            Console.ReadKey();
+        }    
+    
+    }
+
+    class ClassA
+    {
+        public static void MethodA(string message)//target methodA
+        {
+            Console.WriteLine("called ClassA.MethodA() with parameter : " + message);
+        }
+    }
+
+    class ClassB
+    {
+        public static void MethodB(string message)//target methodB
+        {
+            Console.WriteLine("called ClassB.MethodB() with parameter : " + message);
+        }
+    }
+
+}
+
+
+
+
+EXAMPLE:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _delegate_exam_1
+{
+    public delegate void MyDelegate(string msg); //define a delegate
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDelegate del = new MyDelegate(Firdos.M1);
+            //  MyDelegate del = Firdos.M1;//set target methodA
+            del("Programming is fun");
+
+            del = Ramya.M2;//set target methodB
+            del("when");
+
+            del = (string msg) => Console.WriteLine("Called Lambda Expressions : " + msg);//set lambda expression
+            del("we know the logic");
+            Console.ReadKey();
+        }
+
+    }
+
+    class Firdos
+    {
+        public static void M1(string message)//target method1
+        {
+            Console.WriteLine("called Firdos.M1() with parameter : " + message);
+        }
+    }
+
+    class Ramya
+    {
+        public static void M2(string message)//target method2
+        {
+            Console.WriteLine("called Ramya.M2() with parameter : " + message);
+        }
+    }
+
+}
+
+

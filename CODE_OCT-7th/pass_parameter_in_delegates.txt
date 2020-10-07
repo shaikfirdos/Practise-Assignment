@@ -1,0 +1,121 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _pass_parameter_delegate
+{
+    public delegate void MyDelegate(string msg); //define a delegate
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //MyDelegate del = new MyDelegate(ClassA.MethodA);
+             MyDelegate del = ClassA.MethodA;//set target methodA
+            InvokeDelegate(del);
+
+            del = ClassB.MethodB;//set target methodB
+            InvokeDelegate(del);
+
+            del = (string msg) => Console.WriteLine("Called Lambda Expressions : " + msg);//set lambda expression
+            InvokeDelegate(del);
+
+          
+            Console.ReadKey();
+        }
+
+
+        static void InvokeDelegate(MyDelegate del) // MyDelegate type parameter
+        {
+            del("Hello World");
+        }
+
+
+
+        class ClassA
+        {
+            public static void MethodA(string message)//target methodA
+            {
+                Console.WriteLine("called ClassA.MethodA() with parameter : " + message);
+            }
+        }
+
+        class ClassB
+        {
+            public static void MethodB(string message)//target methodB
+            {
+                Console.WriteLine("called ClassB.MethodB() with parameter : " + message);
+            }
+        }
+
+    }
+
+}
+
+
+EXAMPLE:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _parametrs_dlegate2_
+{
+
+    public delegate void Mydata(int num); //define a delegate
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //MyDelegate del = new MyDelegate(ClassA.MethodA);
+            Mydata del = ClassA.MethodA;//set target methodA
+            InvokeDelegate(del);
+
+            del = ClassB.MethodB;//set target methodB
+            InvokeDelegate(del);
+
+            del = (int num) => Console.WriteLine("Called Lambda Expressions : " + num);//set lambda expression
+            InvokeDelegate(del);
+
+
+            Console.ReadKey();
+        }
+
+
+        static void InvokeDelegate(Mydata del) // MyDelegate type parameter
+        {
+            del(1234567890);
+        }
+
+
+
+        class ClassA
+        {
+            public static void MethodA(int number)//target methodA
+            {
+                Console.WriteLine("called ClassA.MethodA() with int parameter : " + number);
+            }
+        }
+
+        class ClassB
+        {
+            public static void MethodB(int number)//target methodB
+            {
+                Console.WriteLine("called ClassB.MethodB() with  int parameter : " + number);
+            }
+        }
+
+    }
+
+
+
+}
+
+
+
+
