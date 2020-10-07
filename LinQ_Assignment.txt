@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _linq_assignment_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Implement the LINQ on collections - List Exaamples
+            IList<Employee_data> EmployeeList = new List<Employee_data>
+            {
+                 //4 Students //4 Id // 4 NAme //4 Age //4Batch
+                new Employee_data() {  EmployeeID  = 1, EmployeeName = "Prathyusha", EmployeeSalary = 27000, EmployeeDesignation = "Data_analyst" },
+                new Employee_data() { EmployeeID  = 2, EmployeeName = "Ramya", EmployeeSalary = 65000, EmployeeDesignation = "HR" },
+                new Employee_data() { EmployeeID  = 3, EmployeeName = "Sai", EmployeeSalary = 18000, EmployeeDesignation = "Technitian" },
+                new Employee_data() { EmployeeID  = 4, EmployeeName = "Sravani", EmployeeSalary =10000, EmployeeDesignation = "Sales"},
+            };
+
+            //applying LINQ logic as same SQL
+            var EmployeeName = EmployeeList.Where(s => s.EmployeeSalary > 18000).Select(s => s).Where(st => st.EmployeeID == 1).Select(s => s.EmployeeName);
+            var EmployeeName1 = EmployeeList.Where(s => s.EmployeeSalary < 18000).Select(s => s).Where(st => st.EmployeeID > 1).Select(s => s.EmployeeName);
+            var EmployeeName2 = EmployeeList.Where(s => s.EmployeeID > 1).Select(s => s).Where(st => st.EmployeeSalary > 10000).Select(s => s.EmployeeName);
+            var EmployeeName3 = EmployeeList.Where(s => s.EmployeeID < 2).Select(s => s).Where(st => st.EmployeeSalary > 18000).Select(s => s.EmployeeDesignation);
+            var EmployeeName4 = EmployeeList.Where(s => s.EmployeeSalary == 18000).Select(s => s).Where(st => st.EmployeeID > 1).Select(s => s.EmployeeDesignation);
+            var EmployeeName5 = EmployeeList.Where(s => s.EmployeeSalary > 0).Select(s => s).Where(st => st.EmployeeID > 0).Select(s => s.EmployeeName);
+
+
+            //Applying LinQ Logic as same SQL
+            var youngEmployeeName = from s in EmployeeList
+                                   where s.EmployeeSalary == 10000 && s.EmployeeSalary < 18000
+                                   select new { employeeName = s.EmployeeName };
+            youngEmployeeName.ToList().ForEach(s => Console.WriteLine(s.employeeName));
+
+            //GroupBy Execution
+
+            var EmployeeGroupByEmployeeDesignation = from s in EmployeeList
+                                      group s by s.EmployeeDesignation into sb
+                                      orderby sb.Key
+                                      select new { sb.Key, sb };
+
+            foreach (var group in EmployeeGroupByEmployeeDesignation)
+            {
+                Console.WriteLine(group.Key);
+            }
+
+
+
+            foreach (var name in EmployeeName)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName1)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName2)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            foreach (var name in EmployeeName3)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            foreach (var name in EmployeeName4)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName5)
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.ReadKey();
+
+
+        }
+
+        public class Employee_data
+        {
+            public int EmployeeID { get; set; }
+            public string EmployeeName { get; set; }
+            public int EmployeeSalary { get; set; }
+            public string EmployeeDesignation { get; set; }
+        }
+    }
+}
