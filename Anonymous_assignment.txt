@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _an0nymous_ass_1_
+{
+    public delegate void SumDelegate(int a, int b);
+    public delegate void MulDelegate(int c, int d);
+    public delegate void Technology(string x); 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SumDelegate SD = delegate (int a, int b)
+            {
+                Console.WriteLine(a + b);
+            };
+            MulDelegate MD = delegate (int c, int d)
+            {
+                Console.WriteLine(c*d);
+            };
+            Technology AD = delegate (string x)
+             {
+                 Console.WriteLine("DXC" + " " + x);
+             };
+            Technology AD1 = delegate (string x)
+            {
+                Console.WriteLine("GOOD {0} " ,x);
+            };
+            AD1.Invoke("AFTERNOON");
+            AD.Invoke("TECHNOLOGY");
+            SD.Invoke(1000, 1);
+            MD.Invoke(10, 100);
+            Console.ReadKey();
+
+        }
+    }
+}

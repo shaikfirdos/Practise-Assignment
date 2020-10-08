@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsAss_2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button b = new Button();//object or reference created to the button
+            b.Text = "Click Ok";//text implemented
+            b.Size = new Size(100, 50);//size maintain for the button (x ccoordinate, y coordinate)
+            b.Location = new Point(600, 350);//pointer located on the button created
+            this.Controls.Add(b);//controling mechanism of button should go to the center
+
+            //b.Click += delegate (object sender1, EventArgs e1)
+            //{
+            //    MessageBox.Show("Hello World!!!");
+            //    MessageBox.Show("Programming is fun");
+            //    MessageBox.Show("This is Printing ");
+            //    MessageBox.Show("This is Printing Again");
+            //    MessageBox.Show("Yeyy!! This is  crazy ");
+            //    MessageBox.Show("Yeyy!! This is Printing crazy ");
+
+
+
+            //};
+
+            b.Click += delegate (object sender1, EventArgs e1)
+            {
+                MessageBox.Show("Hello World!!!!");
+
+            };
+
+            b.Click += delegate (object sender2, EventArgs e2)
+            {
+                MessageBox.Show("Programming is fun");
+
+            };
+
+            b.Click += delegate (object sender3, EventArgs e3)
+            {
+                MessageBox.Show("This is Printing Again");
+
+            };
+            b.Click += delegate (object sender4, EventArgs e4)
+            {
+                MessageBox.Show("Yeyy!! This is crazy");
+
+            };
+
+            b.Click += delegate (object sender5, EventArgs e5)
+            {
+                MessageBox.Show("Yeyy! This is printing Crazy");
+
+            };
+
+
+        }
+    }
+}
