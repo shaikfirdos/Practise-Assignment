@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+
+namespace Single_Threaded_module
+{
+
+    class Program
+    {
+       public string Thread1(string name)
+         {
+            return "Thread1 started";
+         }
+        public int Thread2(int i)
+        {
+            for(i=1;i<10;i++)
+            {
+                if(i==4)
+                {
+                    Console.WriteLine("Thread2 is sleeping");
+                    Thread.Sleep(10000);
+
+                }
+                Console.WriteLine("Thread is at the position {0} ", i);
+            }
+            return i;
+        }
+
+        public string Thread3(string name1)
+        {
+            if (name1.Length < 5)
+            {
+                Console.WriteLine("Thread is sleeping");
+                Thread.Sleep(5000);
+            }
+            return "Thread3 started";
+
+        }
+
+        static void Main(string[] args)
+        {
+            Program P = new Program();
+            string h = P.Thread1("Pikachuu");
+            Console.WriteLine(h);
+            int k = P.Thread2(5);
+            Console.WriteLine(k);
+            string m = P.Thread3("SingleThread");
+            Console.WriteLine(m);
+            Console.ReadKey();
+        }
+    }
+}
