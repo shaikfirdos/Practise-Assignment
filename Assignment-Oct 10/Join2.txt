@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+namespace Joins1
+{
+    class Program
+    {
+
+        static void Thread1()
+        {
+            Console.WriteLine("Thread1  Starting");
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("Thread1 is Executed {0}", i);
+                Console.WriteLine(i * i);
+            }
+            Console.WriteLine("Thread1 is exiting the run");
+        }
+
+        static void Thread2()
+        {
+            Console.WriteLine("Thread2  Starting");
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("Thread2 is Executed {0}", i);
+                int sum = 0;
+                sum += i;
+               
+                Console.WriteLine("Sum : {0}", sum);
+            }
+            Console.WriteLine("Thread2 is exiting the run");
+        }
+
+        static void Thread3()
+        {
+            Console.WriteLine("Thread3  Starting");
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("Thread3 is Executed {0}", i);
+            }
+            Console.WriteLine("Thread3 is exiting the run");
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Demonstration on Join Method in Multithreading");
+            Console.WriteLine("Main Thread Staretd");
+
+            Thread T1 = new Thread(Thread1);
+
+            Thread T2 = new Thread(Thread2);
+
+            T2.Start();
+
+            Thread T3 = new Thread(Thread3);
+            T1.Start();
+
+
+            T3.Start();
+            T1.Join(); T2.Join(); T3.Join();
+
+            //start the Thread - Run the thread
+
+            Console.WriteLine("Main Thread Exiting");
+            Console.ReadKey();
+
+        }
+    }
+}

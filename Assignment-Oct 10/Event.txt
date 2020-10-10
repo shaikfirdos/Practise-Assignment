@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+
+namespace _Examples_event_handler_
+{
+    public delegate void oddNumberDelegate(); //delegate is been created
+
+    class event1
+    {
+        //this is subscriber class
+        static void Main(string[] args)
+        {
+            OddNumbers O = new OddNumbers();
+            //Event gets binded with delegates or registered with delegate
+            O.ev_OddNumber += EventMessage;
+            O.Odd();
+            Console.ReadKey();
+        }
+
+        //Delegates calls this method when event raised.
+
+        static void EventMessage()
+        {
+            Console.WriteLine("********************Event Executed : This is Odd Number****************************");
+
+        }
+
+    }
+
+
+        class OddNumbers
+        {
+            public event oddNumberDelegate ev_OddNumber;//Declared events
+
+            public void Odd()
+            {
+                //Check if result is odd number then raise event
+
+                if (ev_OddNumber != null)
+                {
+                    ev_OddNumber();//Raised Event
+                }
+            }
+        }
+}
+
+   
+

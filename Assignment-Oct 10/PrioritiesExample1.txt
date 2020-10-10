@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace Event_Handler_Examples2
+{
+    class Priorities
+    {
+        static long count1, count2;
+
+        public static void IncrementCount1()
+        {
+            while (true)//indefinite loop
+            {
+
+                count1 += 1;
+
+            }
+
+        }
+
+
+
+        public static void IncrementCount2()
+        {
+            while (true)//indefinite loop
+            {
+
+                count2 += 1;
+               
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            Thread T1 = new Thread(IncrementCount1); //invoke the method IncrementCount1;
+            Thread T2 = new Thread(IncrementCount2); //invoke the method IncrementCount2;
+            Console.WriteLine("Main thread going to sleep for 5 seconds");
+            Thread.Sleep(5000);
+            Console.WriteLine("Main Thread wake up");
+
+            //T1.Priority =ThreadPriority.Highest;
+            //T2.Priority =ThreadPriority.Lowest;
+
+            //T1.Priority = ThreadPriority.AboveNormal;
+            // T2.Priority = ThreadPriority.BelowNormal;
+
+            //T1.Priority = ThreadPriority.Normal;
+            //T2.Priority = ThreadPriority.Lowest;
+
+            //T1.Priority = ThreadPriority.Highest;
+            //T2.Priority = ThreadPriority.Normal;
+
+            //T1.Priority = ThreadPriority.AboveNormal;
+            //T2.Priority = ThreadPriority.Normal;
+
+            //T1.Priority = ThreadPriority.AboveNormal;
+            //T2.Priority = ThreadPriority.AboveNormal;
+
+            //T1.Priority = ThreadPriority.Highest;
+            //T2.Priority = ThreadPriority.Highest;
+
+            // T1.Priority = ThreadPriority.Normal;
+            //T2.Priority = ThreadPriority.BelowNormal;
+
+            //T1.Priority = ThreadPriority.BelowNormal;
+            //T2.Priority = ThreadPriority.Lowest;
+
+            T1.Priority = ThreadPriority.Lowest;
+            T2.Priority = ThreadPriority.Normal;
+
+            T1.Start(); T2.Start();
+            T1.Abort(); T2.Abort();
+            T1.Join(); T2.Join();
+            Console.WriteLine("Count1 is normal {0}", count1);
+            Console.WriteLine("Count2 is normal {0}", count2);
+            Console.ReadKey();
+        }
+    }
+}

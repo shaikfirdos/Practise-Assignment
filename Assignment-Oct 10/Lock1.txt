@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace _Join1Method_
+{
+    class Program
+    {
+     
+            public void Display()
+            {
+               lock(this)//It is used to lock the other thread to execute where the current thread is sleeping time to responce
+               {
+                Console.WriteLine("CSharp is an");
+                Thread.Sleep(5000);
+                Console.WriteLine("Object Oriented Programming Language");
+
+               }
+
+            }
+       
+      
+
+        static void Main(string[] args)
+        {
+           Program obj = new Program();
+            //instantiated the thread with method reference
+            Thread t1 = new Thread(obj.Display);
+            Thread t2= new Thread(obj.Display);
+            Thread t3 = new Thread(obj.Display);
+            Thread t4 = new Thread(obj.Display);
+            Thread t5 = new Thread(obj.Display);
+
+            t1.Start();t2.Start();t3.Start();t4.Start();t5.Start();
+            //obj.Display();
+            Console.ReadKey();
+           
+        }
+
+    }
+
+}
+

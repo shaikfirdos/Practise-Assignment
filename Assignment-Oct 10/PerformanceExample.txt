@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Diagnostics;
+
+namespace Performnace
+{
+
+    class Program
+    {
+        public static int Thread1(int x)
+        {
+            long count = 0;
+            for (int i = 0; i <= 10000000; i++)
+            {
+                count++;
+
+            }
+            Console.WriteLine("Number of counts {0}", count);
+            return x*x;
+        }
+
+
+        public static string Thread2(string str)
+        {
+            long count = 0;
+            for (int i = 0; i <= 10000000; i++)
+            {
+                count++;
+
+            }
+            Console.WriteLine("Number of counts {0}", count);
+            return str;
+        }
+
+        public static float Thread3(float x,float y)
+        {
+            long count = 0;
+            for (int i = 0; i <= 10000000; i++)
+            {
+                count++;
+
+            }
+            Console.WriteLine("Number of counts {0}", count);
+            return x+y;
+        }
+
+        static void Main(string[] args)
+        {
+           
+            Stopwatch S1 = new Stopwatch();
+            S1.Start();
+
+            //instantiate with the method thread 
+            Thread T1 = new Thread(delegate ()
+            {
+                Console.WriteLine(Thread1(5));
+            });
+            Thread T2 = new Thread(delegate ()
+            {
+                Console.WriteLine(Thread2("Thread 2 exited"));
+            });
+
+            Thread T3 = new Thread(delegate ()
+            {
+                Console.WriteLine(Thread3(4.5534f,5389886.4f));
+            });
+
+            T1.Start(); T2.Start();T3.Start();
+            T1.Join(); T2.Join();T3.Join();
+            
+            Console.WriteLine("Stopwatch is started");
+            S1.Stop();
+            Console.WriteLine(S1.ElapsedMilliseconds);
+            Console.WriteLine("Stopwatch is Stopped");
+            Console.ReadKey();
+        }
+    }
+}
+
+    
+
