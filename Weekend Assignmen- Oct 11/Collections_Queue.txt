@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Collection_Queue
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Queue<int> EmpId = new Queue<int>();//Queue object is created
+            EmpId.Enqueue(002);
+            EmpId.Enqueue(004);
+            EmpId.Enqueue(006);//add the value in queue
+            EmpId.Enqueue(008);
+            EmpId.Enqueue(010);
+            EmpId.Enqueue(012);
+            foreach (int fir in EmpId)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir);
+            }
+            Console.WriteLine(EmpId.Contains(100));// check data present or not, it returns bool value
+            Console.WriteLine(EmpId.Contains(010));
+
+            Console.WriteLine("Elements left after applying Dequeue method :" + EmpId.Dequeue());//remove the value in queue
+            Console.WriteLine("Elements left after applying Dequeue method :" + EmpId.Dequeue());
+
+            Console.WriteLine("Peek elements of the Queue is :" + EmpId.Peek());// get the top data in the queue
+
+            foreach (int fir in EmpId)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir);
+            }
+
+            Console.WriteLine("The current Elements present in the queue :" + EmpId.Count());// count the data present in queue
+
+            Queue<string> Crazy = new Queue<string>();
+            Crazy.Enqueue("H");
+            Crazy.Enqueue("E");
+            Crazy.Enqueue("L");
+            Crazy.Enqueue("L");
+            Crazy.Enqueue("O");
+            Crazy.Enqueue("O");
+
+            foreach (string fir1 in Crazy)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir1);
+            }
+            Console.WriteLine(Crazy.Contains("H"));// check data present or not, it returns bool value
+            Console.WriteLine(Crazy.Contains("F"));
+
+            Console.WriteLine("Elements left after applying Dequeue method :" + Crazy.Dequeue());//remove the value in queue
+            
+
+            Console.WriteLine("Peek elements of the Queue is :" + Crazy.Peek());// get the top data in the queue
+
+            foreach (string fir1 in Crazy)
+            {
+                Console.WriteLine("The elements entered in Queue :" + fir1);
+            }
+
+            Console.WriteLine("The current Elements present in the queue :" + Crazy.Count());// count the data present in queue
+
+
+
+
+
+            Console.ReadKey();
+
+
+        }
+    }
+}

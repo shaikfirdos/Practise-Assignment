@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Collections
+{
+    class List
+    {
+        static void Main(string[] args)
+        {
+            List<string> Cities = new List<string>();
+            //var list  = new List<int>();
+            Cities.Add("new York");
+            Cities.Add("London");
+            Cities.Add("Vizag");
+            Cities.Add("Mumbai");
+            Cities.Add("Hyderabad");
+            Console.WriteLine("Cities List1 Created");
+
+            foreach (var l1 in Cities)
+            {
+                Console.WriteLine("The Elements of List are : {0}", l1);//print data present in the list
+            }
+            Console.WriteLine("List1 is : {0}", Cities.Count);//count the data
+            Console.WriteLine(Cities.Contains("Hyderabad"));//check the data present or not
+            //accessing the list elements by index
+            Console.WriteLine("The list of 1st index is : {0} ", Cities[0]);
+            Console.WriteLine("The list of 2nd index is : {0} ", Cities[1]);
+            Console.WriteLine("The list of 3rd index is : {0} ", Cities[2]);
+            Console.WriteLine("The list of 4th index is : {0} ", Cities[3]);
+            Console.WriteLine("The list of 5th index is : {0} ", Cities[4]);
+
+            List<int> Primeno = new List<int>()//list created
+            {1,3,5,7,9,11 };
+
+            Console.WriteLine("List2 Created");
+
+            foreach (var l2 in Primeno)
+            {
+                Console.WriteLine("The Elements of List are : {0}", l2);//print data present in the list
+            }
+            Console.WriteLine("List2 is : {0}", Primeno.Count);//count the data
+            Console.WriteLine(Primeno.Contains(10));//check the data present or not
+            //accessing the list elements by index
+            Console.WriteLine("The list of 1st index is : {0} ", Primeno[0]);
+            Console.WriteLine("The list of 2nd index is : {0} ", Primeno[1]);
+            Console.WriteLine("The list of 3rd index is : {0} ", Primeno[2]);
+            Console.WriteLine("The list of 4th index is : {0} ", Primeno[3]);
+            Console.WriteLine("The list of 5th index is : {0} ", Primeno[4]);
+            Console.WriteLine("The list of 5th index is : {0} ", Primeno[5]);
+
+            List<string> f = new List<string>()
+            {
+                "hope","faith","beleive"
+            };
+            Console.WriteLine("List3 is Created");
+            foreach (var l3 in f)
+            {
+                Console.WriteLine("The Elements of List are : {0}", l3);//print data present in the list
+            }
+            Console.WriteLine("List3 is : {0}", f.Count);//count the data
+            Console.WriteLine(f.Contains("sad"));//check the data present or not
+            //accessing the list elements by index
+            Console.WriteLine("The list of 1st index is : {0} ", f[0]);
+            Console.WriteLine("The list of 2nd index is : {0} ", f[1]);
+            Console.WriteLine("The list of 3rd index is : {0} ", f[2]);
+            
+            //insert(position/index,value)
+            f.Insert(3,"Happy");
+            f.Insert(4,"sad");
+            Console.WriteLine("The list of 6th index is : {0} ", f[3]);
+            Console.WriteLine("The list of 7th index is : {0} ", f[4]);
+            //remove
+            Console.WriteLine("checking for remove method");
+            Console.WriteLine(f.Remove("sad"));
+            
+            Console.ReadKey();
+
+        }
+    }
+}

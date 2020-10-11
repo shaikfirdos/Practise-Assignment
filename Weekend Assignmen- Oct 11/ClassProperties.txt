@@ -1,0 +1,68 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class_Properties
+{
+    class Employee //define a class
+    {
+        //Declare a name property of type string
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
+        //Declare a designation property of type string
+        private string designation;
+        public string Designation
+        {
+            get;set;
+        }
+
+        //Declare a id property of type int
+        private int empid;
+        public int Empid
+        { get; set; }
+
+        //Declare a age property of type int
+        private int empage;
+        public int EmpAge
+        { get; set; }
+
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                Employee E = new Employee();//instantiation of the employeee
+                Console.WriteLine("Enter the Employee Name");
+                E.Name = Console.ReadLine();
+                Console.WriteLine("Enter the Employee Designation");
+                E.Designation = Console.ReadLine();
+                Console.WriteLine("Enter the  Employee Id");
+                E.Empid = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the Employee Age");
+                E.EmpAge = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("employee Data : {0} {1} {2} {3}", E.Name, E.Designation, E.Empid, E.EmpAge);
+
+
+            }
+
+
+        }
+    }
+}

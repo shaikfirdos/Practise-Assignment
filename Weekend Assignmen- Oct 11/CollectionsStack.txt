@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Collections_Stack
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stack<int> EmpId = new Stack<int>();//stack object is created [LIFO]
+            EmpId.Push(002);
+            EmpId.Push(004);
+            EmpId.Push(006);//add the value in stack
+            EmpId.Push(008);
+            EmpId.Push(010);
+            EmpId.Push(012);
+            foreach (int fir in EmpId)
+            {
+                Console.WriteLine("The elements entered in stack :" + fir);
+            }
+            Console.WriteLine(EmpId.Contains(100));// check data present or not, it returns bool value
+            Console.WriteLine(EmpId.Contains(010));
+
+            Console.WriteLine("Elements left after applying Pop method :" + EmpId.Pop());//remove the value in stack
+            Console.WriteLine("Elements left after applying Pop method :" + EmpId.Pop());
+
+            Console.WriteLine("Peek elements of the Stack is :" + EmpId.Peek());// get the top data in the stack
+
+            foreach (int fir in EmpId)
+            {
+                Console.WriteLine("The elements entered in Stack :" + fir);
+            }
+
+            Console.WriteLine("The current Elements present in the Stack :" + EmpId.Count());// count the data present instack
+
+            Stack<string> Crazy = new Stack<string>();
+            Crazy.Push("H");
+            Crazy.Push("E");
+            Crazy.Push("L");
+            Crazy.Push("L");
+            Crazy.Push("O");
+            Crazy.Push("O");
+
+            foreach (string fir1 in Crazy)
+            {
+                Console.WriteLine("The elements entered in Stack :" + fir1);
+            }
+            Console.WriteLine(Crazy.Contains("H"));// check data present or not, it returns bool value
+            Console.WriteLine(Crazy.Contains("F"));
+
+            Console.WriteLine("Elements left after applying Pop method :" + Crazy.Pop());//remove the value in stack
+
+
+            Console.WriteLine("Peek elements of the Stack is :" + Crazy.Peek());// get the top data in the stack
+
+            foreach (string fir1 in Crazy)
+            {
+                Console.WriteLine("The elements entered in Stack :" + fir1);
+            }
+
+            Console.WriteLine("The current Elements present in the Stack :" + Crazy.Count());// count the data present in stack
+
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

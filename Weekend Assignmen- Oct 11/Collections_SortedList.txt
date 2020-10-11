@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+
+namespace Collections_Sortedlist
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SortedList<int, string> list = new SortedList<int, string>();//define the sorted list 
+            list.Add(4, "happy");
+            list.Add(3, "Faith");
+            list.Add(1, "beleive");
+            list.Add(2, "Dedication");
+
+            foreach(var pair in list)
+            {
+                Console.WriteLine("{0} {1}", pair.Key, pair.Value);
+            }
+            Console.ReadKey();
+        }
+    }
+}

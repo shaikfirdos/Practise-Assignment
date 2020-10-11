@@ -1,0 +1,123 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LINQ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Implement the LINQ on collections - List Exaamples
+            IList<Employee_data> EmployeeList = new List<Employee_data>
+            {
+                 //4 Students //4 Id // 4 NAme //4 Age //4Batch
+                new Employee_data() {  EmployeeID  = 1, EmployeeName = "Prathyusha", EmployeeSalary = 27000, EmployeeDesignation = "Techinical lead" },
+                new Employee_data() { EmployeeID  = 2, EmployeeName = "Ramya", EmployeeSalary = 65000, EmployeeDesignation = "HR" },
+                new Employee_data() { EmployeeID  = 3, EmployeeName = "Sai", EmployeeSalary = 18000, EmployeeDesignation = "Technical Trainer" },
+                new Employee_data() { EmployeeID  = 4, EmployeeName = "Sravani", EmployeeSalary =10000, EmployeeDesignation = "Technitian"},
+            };
+
+            //applying LINQ logic as same SQL
+            var EmployeeName = EmployeeList.Where(s => s.EmployeeSalary > 18000).Select(s => s).Where(st => st.EmployeeID == 1).Select(s => s.EmployeeName);
+            var EmployeeName1 = EmployeeList.Where(s => s.EmployeeSalary < 18000).Select(s => s).Where(st => st.EmployeeID > 1).Select(s => s.EmployeeName);
+            var EmployeeName2 = EmployeeList.Where(s => s.EmployeeID > 1).Select(s => s).Where(st => st.EmployeeSalary > 10000).Select(s => s.EmployeeName);
+            var EmployeeName3 = EmployeeList.Where(s => s.EmployeeID < 2).Select(s => s).Where(st => st.EmployeeSalary > 18000).Select(s => s.EmployeeDesignation);
+            var EmployeeName4 = EmployeeList.Where(s => s.EmployeeSalary == 18000).Select(s => s).Where(st => st.EmployeeID > 1).Select(s => s.EmployeeDesignation);
+            var EmployeeName5 = EmployeeList.Where(s => s.EmployeeSalary > 0).Select(s => s).Where(st => st.EmployeeID > 0).Select(s => s.EmployeeName);
+            var EmployeeName6 = EmployeeList.Where(s => s.EmployeeID > 0).Select(s => s).Where(st => st.EmployeeName == "Sai").Select(s => s.EmployeeSalary);
+            var EmployeeName7 = EmployeeList.Where(s => s.EmployeeID > 0).Select(s => s).Where(st => st.EmployeeName == "Ramya").Select(s => s.EmployeeSalary);
+            var EmployeeName8 = EmployeeList.Where(s => s.EmployeeName == "sai").Select(s => s).Where(st => st.EmployeeDesignation=="Technical Trainer").Select(s => s.EmployeeID);
+            var EmployeeName9 = EmployeeList.Where(s => s.EmployeeName == "Prathyusha").Select(s => s).Where(st => st.EmployeeSalary == 27000).Select(s => s.EmployeeID);
+
+            //Applying LinQ Logic as same SQL
+            var youngEmployeeName = from s in EmployeeList
+                                    where s.EmployeeSalary == 10000 && s.EmployeeSalary < 18000
+                                    select new { employeeName = s.EmployeeName };
+            youngEmployeeName.ToList().ForEach(s => Console.WriteLine(s.employeeName));
+
+            //GroupBy Execution
+
+            var EmployeeGroupByEmployeeDesignation = from s in EmployeeList
+                                                     group s by s.EmployeeDesignation into sb
+                                                     orderby sb.Key
+                                                     select new { sb.Key, sb };
+
+            foreach (var group in EmployeeGroupByEmployeeDesignation)
+            {
+                Console.WriteLine(group.Key);
+            }
+
+
+
+            foreach (var name in EmployeeName)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName1)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName2)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            foreach (var name in EmployeeName3)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            foreach (var name in EmployeeName4)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName5)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName6)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName7)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            foreach (var name in EmployeeName8)
+            {
+                Console.WriteLine(name);
+            }
+
+            foreach (var name in EmployeeName9)
+            {
+                Console.WriteLine(name);
+            }
+
+
+            Console.ReadKey();
+
+
+        }
+
+        public class Employee_data
+        {
+            public int EmployeeID { get; set; }
+            public string EmployeeName { get; set; }
+            public int EmployeeSalary { get; set; }
+            public string EmployeeDesignation { get; set; }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lambda
+{
+    public delegate void Delegate1(string x);
+    public delegate bool checkDelegate(int y);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Delegate1 AD1 = delegate (string d)
+            {
+                Console.WriteLine("{0} Crazy", d);
+            };
+            AD1("Its");
+
+            checkDelegate CD1 = delegate (int h)
+            {
+                if (h % 2 != 0)
+                    return true;
+                else
+                    return false;
+            };
+            bool b = CD1(67);
+            Console.WriteLine(b);
+            Console.ReadKey();
+        }
+    }
+}

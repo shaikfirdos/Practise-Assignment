@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace File_Handling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //this file create a file named sample.txt from local machine
+            //streamWriter "name" = new StreamWriter("location of path");
+            //path:C:\Users\FIRDOS\Desktop\\sample.txt
+            StreamWriter sw = new StreamWriter(@"C:\Users\FIRDOS\Desktop\text.txt");
+            //to write on the console screen
+            Console.WriteLine("Check the below generated table of 1 to 10");
+            for(int i=1;i<=10;i++)
+            {
+                for(int j=1;j<=10;j++)
+                {
+                    sw.WriteLine("{0}x{1}={2}", i, j, (i * j));
+                }
+            }
+            
+            //to write the output stream
+            sw.Flush();
+            //we need to close the stream
+            sw.Close();
+
+            FileStream FS = new FileStream(@"C:\Users\FIRDOS\Desktop\text.txt", FileMode.OpenOrCreate);
+            StreamReader sr = new StreamReader(FS);// instancing to the Stream read
+            string tables = null;
+            while((tables = sr.ReadLine())!=null)
+                {
+                Console.WriteLine("{0}", tables);
+                 }
+            Console.WriteLine("Table is Printed");
+             
+            sr.Close();//Closing the StreamReader
+            FS.Close();//Closing The file on the specified ocation
+            Console.ReadKey();
+
+        }
+    }
+}
+

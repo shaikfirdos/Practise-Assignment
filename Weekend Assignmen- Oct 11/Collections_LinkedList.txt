@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Collections_Linkedlist
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            LinkedList<string> x1 = new LinkedList<string>();//create linked list
+            x1.AddFirst("Arif");
+            x1.AddFirst("Adil");//using AddFirst(),the data first inserted will be present in last
+            x1.AddFirst("Jayaboon");
+            x1.AddFirst("Nayeema");
+
+            Console.WriteLine("Best Buddies in clg days :");
+            foreach(var x in x1)
+            {
+                Console.WriteLine(x);
+            }
+
+            x1.Remove("Jayaboon");//remove the member in list
+
+            Console.WriteLine("after removine the member in a linked list :");
+            foreach (var x in x1)
+            {
+                Console.WriteLine(x);
+            }
+
+            x1.RemoveFirst();//remove the first member in present list
+
+            Console.WriteLine("after removefirst method in a linked list :");
+            foreach (var x in x1)
+            {
+                Console.WriteLine(x);
+            }
+
+            x1.RemoveLast();//remove the last member in present list
+
+            Console.WriteLine("after removelast method  in a linked list :");
+            foreach (var x in x1)
+            {
+                Console.WriteLine(x);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

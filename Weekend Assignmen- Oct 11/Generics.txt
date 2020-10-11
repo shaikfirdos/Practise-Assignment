@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GenericsInCsharp
+{
+    class Program
+    {
+        static void Swap<T>(ref T a, ref T b)//Generic Method
+        {
+            T temp;
+            temp = a;
+            a = b;
+            b = temp;
+        }
+        static void Main(string[] args)
+        {
+            //Swap of two integers
+            int a = 40, b = 60;
+            Console.WriteLine("Before Swap :{0},{1}", a, b);
+
+            Swap<int>(ref a, ref b);
+            Console.WriteLine("After Swap :{0},{1}", a, b);
+
+            Console.ReadLine();
+
+        }
+    }
+}

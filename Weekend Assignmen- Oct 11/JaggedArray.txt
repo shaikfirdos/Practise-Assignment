@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JaggedArray
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Jagged array with Single Dimensional array
+            int[][] arr = new int[3][];
+            arr[0] = new int[4] { 1, 2, 3, 4 };
+            arr[1] = new int[3] { 5, 6, 7 };
+            arr[2] = new int [6]{ 78,99,0,45,1,4};
+            Console.WriteLine("**********************Jagged Array with Single Dimensional  ************************");
+            for(int i=0;i<arr.Length;i++)
+            {
+                Console.WriteLine("Elements :  {0}", i);
+                for(int j=0;j<arr[i].Length;j++)
+                {
+                    Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? " " : " ");
+                   
+                }
+                Console.WriteLine();
+            }
+
+            //Jagged array with Two Dimensional Arary
+            int[][,] arr1 = new int[2][,];
+            arr1[0] = new int[2, 2] { { 15, 12 }, { 4, 5 } };
+            arr1[1] = new int[2, 2] { { 1, 2 }, { 3, 4 } };
+            Console.WriteLine("**********************Jagged Array with Multi Dimensional  ************************");
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                Console.WriteLine("Elements :  {0}", i);
+                int x = 0;
+                for (int j = 0; j < arr1[i].GetLength(x); j++)//GetLength method specifies the dimension of the array 
+                {
+                  
+                    for (int k = 0; k < arr1[i].GetLength(j); k++)//used to determine the total dimensions in an array
+                    {
+                        Console.Write("Jagged_Array[" + i + "][" + j + ", " + k + "]:" + arr1[i][j, k] + " ");
+                    }
+                }
+                Console.WriteLine();
+            }
+                    Console.ReadKey();
+
+        }
+    }
+}

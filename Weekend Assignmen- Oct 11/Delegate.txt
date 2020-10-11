@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegate
+{
+    public delegate double Delegate1(int a, float b);
+    public delegate int Delegate2(int a, int b);
+    public delegate double Delegate3(int l, int b);
+
+    class Program
+    {
+        public static double add(int a, float b)
+        {
+            return a + b;
+        }
+        public static int Mul(int a, int b)
+        {
+            return a * b;
+        }
+        public static double M2(int l, int b)
+        {
+            return 2*(l * b);
+        }
+
+        static void Main(string[] args)
+        {
+            Delegate1 AD = new Delegate1(add);
+            double r1 = AD(67, 99.90f);
+            Console.WriteLine(r1);
+            Delegate2 AD1 = new Delegate2(Mul);
+            int r2 = AD1(40, 40);
+            Console.WriteLine(r2);
+            Delegate3 AD3 = new Delegate3(M2);
+            double r3 = AD3(4, 4);
+            Console.WriteLine(r3);
+            Console.ReadKey();
+        }
+    }
+}

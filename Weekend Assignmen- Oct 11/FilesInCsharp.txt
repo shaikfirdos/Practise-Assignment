@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace FilesinCsharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var writetext = "Happy Weekend";
+            File.WriteAllText(@"C:\Users\FIRDOS\Desktop\sample.txt", writetext);//write the text in sample file
+            File.AppendAllText(@"C: \Users\FIRDOS\Desktop\sample.txt","This is file existing");//add the text in sample file
+
+            File.Create(@"C:\Users\FIRDOS\Desktop\data_file.txt");//create a file
+           // File.Copy(@"C:\Users\FIRDOS\Desktop\sample.txt", @"C:\Users\FIRDOS\Desktop\Display.txt");//Copy the data from one file to other created file at once only
+            bool b = File.Exists(@"C:\Users\FIRDOS\Desktop\da_file.txt");
+            Console.WriteLine(b);//returns true If the file is present
+            //File.Delete(@"C:\Users\FIRDOS\Desktop\data_file.txt");
+            var readtext = File.ReadAllText(@"C:\Users\FIRDOS\Desktop\sample.txt");
+            Console.WriteLine(readtext);
+            Console.ReadKey();
+        }
+    }
+}

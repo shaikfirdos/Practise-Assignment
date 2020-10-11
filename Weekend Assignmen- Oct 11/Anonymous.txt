@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anonymous
+{
+    public delegate double Delegate1(int a, float b);
+    public delegate int Delegate2(int a, int b);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Delegate1 AD = delegate (int c, float d)
+            {
+                return c + d;
+            };
+            double r1 = AD(67, 99.90f);
+            Console.WriteLine(r1);
+
+            Delegate2 AD1 = delegate (int e, int h)
+            {
+                return e * h;
+            };
+            int r2 = AD1(40, 40);
+            Console.WriteLine(r2);
+
+            Console.ReadKey();
+
+        }
+    }
+}
