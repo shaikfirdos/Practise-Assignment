@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function getName() {
+        var name = document.calculate.n1.value;
+        window.alert("ur name is " + name);
+    }
+</script>
+
+    <form action="" name="calculate"  onsubmit="getName()">
+        <input type="text" name="n1" /><br />
+        <input type="submit" value="submit" />
+    </form>
+
+    <script type="text/javascript">
+        var a = 10;
+        var name = "sachin";
+        var salary = 30000.67;
+        var age = "34";
+
+        document.write(a + " " + typeof (a) + "<br>");
+        document.write(name + " " + typeof (name) + "<br>");
+        document.write(salary + " " + typeof (salary) + "<br>");
+        document.write(age + " " + typeof (age) + "<br>");
+        var age1 = Number(age);
+        document.write(age1 + " " + typeof (age1) + "<br>");
+    </script>
+
+    <script type="text/javascript">
+        for (var i = 1; i <= 10; i++) {
+            document.write(i + " " + "firdos" +"<br>");
+        }
+
+    </script>
+
+    
+</body>
+</html>

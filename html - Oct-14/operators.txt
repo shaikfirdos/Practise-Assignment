@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+      /*  var age = 20;
+        var name = "firdos";
+        var salary = 23000.09;
+        document.write("your age is " + age);
+        window.alert("your name is " + name);
+        Console.log("your salary is " + salary); */
+
+       /* var a = 1;
+        var b = 2;
+        var c = "hello";
+        var d = a + b + c;
+        document.write("sum is " + d);*/
+        /*var age = 20;
+        if (age > 18) {
+            alert("u can vote");
+        }
+        else {
+            alert("u cant vote");
+        }*/
+
+       /* var a = 1;
+        document.write("value of a" + a);
+        var b = a++;
+        document.write("value of b" + b);
+        var b = ++a;
+        document.write("value of b" + b);*/
+
+        var a = 5;
+        var b = 5;
+        document.write(a == b);/* it will check data onlu*/
+        document.write(a ===);/*it will check data type */
+
+        var c = 3;
+        vaar d = 5;
+        document.write(c != d);
+        document.write(c !== d);
+
+    </script>
+    <h1>this is h1</h1>
+</body>
+</html>

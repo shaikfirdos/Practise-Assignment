@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="background-image :url(a3.jpg)">
+    <h1>My Website</h1>
+    <img src="a2.jpg" width="300" height="242" /><!--display the image in web page-->
+    <img src="a2.jpg" alt="Solar Eclipse" width=" 400" height="350" /><!--<img> is the inline element-->
+    <img src="a2.jpg" alt="Solar Eclipse" style="float:left" width=" 600" height="350" /><!--float is used to move the image from left to r8-->
+    <hr />
+
+    <h1>Links</h1>
+    <a href="https:www.google.com">Click me</a>
+    <a href="https:www.google.com"><img src="a2.jpg" alt="Googliii" width="200" height="150" /></a><!--acces the link by picture-->
+    <a href="https:www.google.com" target="_blank"><img src="a2.jpg" alt="Googliii" width="200" height="150" /></a><!--open the link in new tab-->
+    <a href="https://www.gmail.com/ " target="_blank">Gmail</a>
+    <hr />
+
+    <p style=" color:red">
+<!-- text wil be colored-->
+        hai
+        hello
+        namaste
+    </p><!--block element-->
+    <p style="background-color:aqua">
+<!-- backgrounnd wil be colored-->
+        hai
+        hello
+        namaste
+    </p>
+    <pre style="background-color:burlywood">
+     <h2>hai</h2>
+      hello
+      namaste
+    </pre>
+
+    <p style="background-color:pink"><b>This is new Para</b></p>
+    <p style="background-color:blueviolet"><i>This is new Para</i></p>
+    <p style="background-color:burlywood"><strong>This is <mark>new</mark> Para</strong></p>
+
+
+
+
+
+</body>
+</html>
