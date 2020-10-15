@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            background-color:powderblue;
+            color:black;
+            font-size:20px;
+            font-weight:bold;
+            font-family:Magneto;
+            
+        }
+
+        #button{
+            background-color:black;
+            color:white;
+            font-size:18px;
+            padding:5px;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form name="Quiz" id="Quiz">
+        <div>
+            <p >1.The word “document” mainly refers to ______________</p>
+            <p ><input type="radio" name="Q1" value="Dynamic Information" />A. Dynamic Information</p>
+            <p><input type="radio" name="Q1" value="Static Information" />B. Static Information</p>
+            <p><input type="radio" name="Q1" value="Both Dynamic and Static Information" />C. Both Dynamic and Static Information</p>
+            <p><input type="radio" name="Q1" value="Temporary Information" />D. Temporary Information</p>
+        </div>
+
+        <div>
+            <p>2.Which is the property that represents the content displayed in the window?</p>
+            <p><input type="radio" name="Q2" value="document" />A. document</p>
+            <p><input type="radio" name="Q2" value=" content" />B. content</p>
+            <p><input type="radio" name="Q2" value="window" />C. window</p>
+            <p><input type="radio" name="Q2" value="frame" />D. frame</p>
+        </div>
+
+        <div>
+            <p>3.Which Window object method is used to display a message in a dialog box?</p>
+            <p><input type="radio" name="Q3" value="alert()"/>A. alert()</p>
+            <p><input type="radio" name="Q3" value="prompt()"/>B. prompt()</p>
+            <p><input type="radio" name="Q3" value="message()"/>C. message()</p>
+            <p><input type="radio" name="Q3" value="console.log"/>D. console.log</p>
+        </div>
+        <div>
+            <p>4.HTML stands for?</p>
+            <p><input type="radio" name="Q4" value="Hyper Text Markup Languag" />A.Hyper Text Markup Languag</p>
+            <p><input type="radio" name="Q4" value=" High Text Markup Language" />B.  High Text Markup Language</p>
+            <p><input type="radio" name="Q4" value="Hyper Tabular Markup Language" />C. Hyper Tabular Markup Language</p>
+            <p><input type="radio" name="Q4" value="None of these" />D. None of these</p>
+        </div>
+        <div>
+            <p>5.which of the following tag is used to mark a begining of paragraph ?</p>
+            <p><input type="radio" name="Q5" value="TD" />A. TD</p>
+            <p><input type="radio" name="Q5" value="br" />B. br</p>
+            <p><input type="radio" name="Q5" value="TR" />C. TR</p>
+            <p><input type="radio" name="Q5" value="p" />D. p</p>
+        </div>
+        <div>
+            <p>6.Correct HTML tag for the largest heading is</p>
+            <p><input type="radio" name="Q6" value="head" />A. head</p>
+            <p><input type="radio" name="Q6" value="h6" />B. h6</p>
+            <p><input type="radio" name="Q6" value="heading" />C. heading</p>
+            <p><input type="radio" name="Q6" value="h1" />D. h1</p>
+        </div>
+
+        <input type="submit" name="" value="Submit" id="button"onclick="check()"/>
+
+    </form>
+    <script type="text/javascript">
+        function check()
+        {
+            var q1 = document.Quiz.Q1.value;
+            var q2 = document.Quiz.Q2.value;
+            var q3 = document.Quiz.Q3.value;
+            var q4 = document.Quiz.Q4.value;
+            var q5 = document.Quiz.Q5.value;
+            var q6 = document.Quiz.Q6.value;
+            var c = 0;
+            if (q1 == "Static Information") { c++ }
+            if (q2 == "document") { c++ }
+            if (q3 == "alert()") { c++ }
+            if (q4 == "Hyper Text Markup Languag") { c++ }
+            if (q5 == "p") { c++ }
+            if (q6 == "h1") { c++ }
+           // document.write(c);
+            var result = document.getElementById('result');
+            result.textContent = document.write(c);
+
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <h2>join()</h2>
+    <p>
+        the method used to join array into a string
+    </p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <button onclick="myFunction()">click it</button>
+    <script type="text/javascript">
+        var flowers = ["Rose", "lily", "jasmine", "tulip", "Iris"];
+        document.getElementById("demo1").innerHTML = flowers.join(" * ");
+        flowers.pop();
+        document.getElementById("demo2").innerHTML = flowers.join(" + ");
+        flowers.push("sunflower");
+        document.getElementById("demo3").innerHTML = flowers.join(" $ ");
+        flowers.shift();//shift the 1st element in an array
+        document.getElementById("demo4").innerHTML = flowers.join(" # ");
+        flowers.unshift("CactusFlower");//adds the element at the beginning in an array
+        document.getElementById("demo5").innerHTML = flowers.join(" @ ");
+        function myFunction() {
+            flowers[flowers.length] = "bluebell";//length property is easy way to add anew element in ana array
+            document.getElementById("demo6").innerHTML = flowers.join("!");
+        }
+        flowers[2] = "ROSE";//assign the element through index value in an array
+        document.getElementById("demo7").innerHTML = flowers.join("%");
+
+        flowers.splice(3, 0, "Poppy", "Orchid");//splice() can be used to add a new elements to an array
+        document.getElementById("demo8").innerHTML = flowers.join("-");
+        delete flowers[0];
+        document.getElementById("demo9").innerHTML = flowers.join("?");
+
+
+        var arr1 = ["Cecilie", "Lone"];
+        var arr2 = ["Emil", "Tobias", "Linus"];
+        var arr3 = ["Robin", "Morgan"];
+        var myChildren = arr1.concat(arr2, arr3);   // Concatenates arr1 with arr2 and arr3
+        document.getElementById("demo10").innerHTML = myChildren;
+
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        var citrus = fruits.slice(1);//slice() method slices out a piece of an array into a new array.
+        document.getElementById("demo11").innerHTML = fruits + "<br><br>" + citrus;;
+    </script>
+</body>
+</html>

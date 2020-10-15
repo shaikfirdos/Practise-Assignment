@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function f1() {
+            if (confirm("age > 18")) {
+                alert("u can watch");
+            }
+            else {
+                alert("u cannot watch");
+            }
+        }
+        function f2() {
+            var v = prompt("enter ur ");
+            alert("your age is :" + v);
+        }
+        function f3() {
+            open("https://www.google.com/search?q=gmail+login&rlz=1C1CHBF_enIN916IN916&oq=gmsi&aqs=chrome.2.69i57j0i10i457j0i10l6.5677j0j7&sourceid=chrome&ie=UTF-8");
+        }
+    </script>
+    <button onclick="f1()">click</button>
+    <button onclick="f2()">click2</button>
+    <button onclick="f3()">click3</button>
+</body>
+</html>

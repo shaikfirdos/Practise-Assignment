@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .x1{
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function f1() {
+            alert("hi");
+            for (i = 0; i < 3; i++)
+                document.getElementsByTagName('h1')[i].innerHTML = "hai gd aftenoon";
+        }
+        function f2() {
+            alert("hey");
+            var x = document.getElementsByClassName("x1").length;//its gives the count( how many time h2 will be accessed)
+            document.write("length is" + x);
+        }
+        function f3() {
+            alert("hello");
+            var y = document.getElementsByClassName("t1").length;
+            document.write("length is" + y);
+
+        }
+        function f4() {
+            alert("hey buddy!!! It time to change the background color of header file ");
+            var f = document.getElementsByClassName("x1");
+            f[0].style.backgroundColor = "red";
+            f[1].style.backgroundColor = "pink";
+            f[2].style.backgroundColor = "blue";
+
+
+        }
+
+    </script>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+    <button onclick="f1()">click</button>
+
+    <h2 class="x1">this is h2</h2>
+    <h2 class="x1">this is h2</h2>
+    <h2 class="x1">this is h2</h2>
+    <h2 class="t1">this is h2</h2>
+    <h2 class="t1">this is h2</h2>
+    <h2 class="t1">this is h2</h2>
+    <h2 class="t1">this is h2</h2>
+    <h2 class="t1">this is h2</h2>
+    <button onclick="f2()">click1</button>
+    <button onclick="f3()">click2</button>
+    <button onclick="f4()">click3</button>
+</body>
+</html>
