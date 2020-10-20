@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("h1").hide();
+                $("h2").hide();
+                $("h3").hide();
+                $("h4").hide();
+                $("h5").hide();
+                $("h6").hide();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#b2").click(function () {
+                $("h1").hide();
+                $("h2").hide();
+                $("h3").hide();
+                $("h4").hide();
+                $("h5").hide();
+                $("h6").hide();
+                $(this).hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#b3").click(function () {
+                $("h1").hide();
+                $("h2").hide();
+                $("h3").hide();
+                $("h4").hide();
+                $("h5").hide();
+                $("h6").hide();
+                $("*").hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#b4").click(function () {
+                $("p.intro").hide()
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>progamming is fun</h1>
+    <h2>progamming is fun</h2>
+    <h3>progamming is fun</h3>
+    <h4>progamming is fun</h4>
+    <h5>progamming is fun</h5>
+    <h6>programming is fun</h6>
+    <p>This is an example of JQuery on hide method()</p>
+    <p class="intro">Happy evening</p>
+
+    <div><button id="b1">Click me hide</button></div>
+    <div><button id="b2">Click me hide the data by using <b>this</b> keyword</button></div>
+    <div><button id="b3">Click me hide the data by using <b>*</b></button></div>
+    <div><button id="b4">Click me hide the data by using <b>class intro</b></button></div>
+
+
+</body>
+</html>
