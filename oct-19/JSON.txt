@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>this is JSON class</title>
+
+</head>
+<body>
+   
+    <p>Access to Javascript Objects</p>
+    <p id="demo"></p>
+<script>
+    var example;
+    var person = { "name": "firdos", "age": 22, "city": "Bangalore"};//JSON Syntax
+
+    //example is another JavaScript object through which data been accessed
+    example = person.name;
+   // example = person.age;
+    //example = person.city;
+    document.getElementById("demo").innerHTML = example;//object created for example
+
+    
+   
+</script>
+
+
+</body>
+</html>

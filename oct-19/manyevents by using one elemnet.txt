@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Second web Tab</title>
+</head>
+<body>
+    <h2>Java Script event listener</h2>
+    <p>EventListenerMethod to Two clicks on single button</p>
+    <button id="b1">Click me</button>
+
+    <script>
+        var x = document.getElementById("b1");
+        x.addEventListener("click", f1);
+        x.addEventListener("click", f2);
+
+        function f1() {
+            alert("This is 1st event");
+        }
+
+        function f2() {
+            alert("This is my 2nd event");
+        }
+    </script>
+
+
+
+
+</body>
+</html>

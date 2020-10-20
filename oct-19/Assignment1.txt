@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>First Tab</title>
+</head>
+<body>
+    <h1 id="a1">We are Crazy</h1>
+    <h1 id="a2">saddest Person</h1>
+    <h1 id="a3">Its 2 am</h1>
+    <img id="a4" src="f3.gif" height="200" width="300" />
+    <img id="a5" src="f1.png" height="200" width="300" />
+    <button onclick="f1()">click to change the data in id1</button>
+    <button onclick="f2()">click to change the data in id2</button>
+    <button onclick="f3()">click to change the data in id3</button>
+    <button onclick="f4()">click to change the image in id4</button>
+    <button onclick="f5()">click to change the gif in id5</button>
+
+    <script>
+        function f1() {
+            document.getElementById("a1").innerHTML = "We are idiots";
+
+        }
+        function f2() {
+            document.getElementById("a2").innerHTML = "Happiest Person";
+
+        }
+        function f3() {
+            document.getElementById("a3").innerHTML = "Getting Late";
+
+        }
+        function f4() {
+            document.getElementById("a4").src = "a3.gif";
+
+        }
+        function f5() {
+            document.getElementById("a5").src = "f2.png";
+
+        }
+
+    </script>
+</body>
+</html>
+
+

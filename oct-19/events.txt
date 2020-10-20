@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My first WebhtTab</title>
+</head>
+<body>
+    <p>Click on Hello world , it will display something  new</p>
+    <!--<h1 onclick="this.innerHTML= 'welcome to Javascript!!!!!'">hello world</h1>-->
+    <h1>Function Implementation on events</h1>
+    <h1 onclick="f1(this)">Helloworld</h1>
+    <h2 onclick="f2(this)">Programming is fun</h2>
+    <h3 onclick="f3(this)">it is crazy</h3>
+    <h4 onclick="f4(this)">Tooo crazy</h4>
+    <!--Function implementation-->
+    <script>
+        function f1(id) {
+            id.innerHTML = "Welcome to  Javascript";
+        }
+        function f2(id1) {
+            id1.innerHTML = "we are learning javascript";
+        }
+        function f3(id) {
+            id.innerHTML = "javascript found easy to learn";
+
+        }
+        function f4(id) {
+            id.innerHTML = "javascript runs on google chrome v8 engine";
+
+        }
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+
+        }
+
+        function xtraevents(color) {
+
+            color.innerHTML = "this is crazy";
+
+        }
+        function xtraevents2(color) {
+            color.innerHTML = "Mouse over me";
+        }
+        function xtraevents3(color) {
+
+            color.innerHTML = "Mouse uP";
+
+        }
+        function xtraevents4(color) {
+            color.innerHTML = "Mouse down";
+        }
+        function xtraevents5(color) {
+            color.innerHTML = "Mouse move";
+        }
+    </script>
+
+    <p>The addEventListerMethd Demonstration wrt button</p>
+    <button id="p2">Click me here</button>
+    <script>
+        document.getElementById("p2").addEventListener("click", function ()//element.addEventListener(event,function,usercapture);
+        {
+            alert("this is eventListner method example");
+            console.log("This is demo about EventListener method with log console");
+            document.write("this is demo about eventListener method with write ");
+        });
+    </script>
+    <p>This is demo about with an explicit function</p>
+    <button id="b1">Click_Again</button>
+    <script>
+       
+        function example() {
+            alert("this is eventListner method example");
+            console.log("This is demo about EventListener method with log console");
+            document.write("this is demo about eventListener method with write ");
+        }
+        document.getElementById("b1").addEventListener("click", example);
+        
+    </script>
+    <div onmouseover="xtraevents(this)" onmouseout="xtraevents2(this)" style="Background-color:cyan ; width:180px; height:100px; font-size:30px; padding:40px">show me </div>
+    <!--<div onmouseup="xtraevents3(this)" onmousedown="xtraevents4(this)" style="Background-color:pink ; width:180px; height:100px; font-size:30px; padding:60px">show me the mousedown & mouse up operations</div>
+        <div onmousemove="xtraevents5(this)" onmousedown="xtraevents4(this)" style="Background-color:purple ; width:180px; height:100px; font-size:30px; padding:50px">show me</div>
+    -->
+    <div onmouseup="xtraevents3(this)" style="Background-color:pink ; width:180px; height:100px; font-size:30px; padding:60px; border:dotted">show me the mouse up operations</div>
+    <div onmousedown="xtraevents4(this)" style="Background-color:purple ; width:180px; height:100px; font-size:30px; padding:50px ; border:dashed">show me</div>
+    <div onmousemove="xtraevents5(this)" style="Background-color:red ; width:180px; height:100px; font-size:30px; padding:50px ; border:double">show me</div>
+
+
+
+    <p>Click the button  to display the Date & Time</p>
+    <button onclick="displayDate()">Click for date info </button>
+    <p id="demo"></p>
+
+
+</body>
+</html>

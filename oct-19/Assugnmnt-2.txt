@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+    <style>
+        .a{
+            background-color:red;
+            color:yellow;
+            font-family:Algerian;
+            font-style:normal;
+            font-size:20px;
+            border:dashed;
+        }
+        .b {
+            background-color:green;
+            color: yellowgreen;
+            font-family:Arial;
+            font-style: oblique;
+            font-size: 20px;
+            border:dotted;
+        }
+        .c {
+            background-color: darkblue;
+            color: lavender;
+            font-family:'Lucida Bright';
+            font-style:unset;
+            font-size: 20px;
+            border:double;
+        }
+        .d {
+            background-color: deeppink;
+            color: lavender;
+            font-family: 'Informal Roman';
+            font-style:initial;
+            font-size: 20px;
+            border:groove;
+        }
+
+        .e {
+            background-color:aquamarine;
+            color:honeydew;
+            font-family: Bahnschrift;
+            font-style: italic;
+            font-size: 20px;
+            border:medium;
+        }
+
+        .f {
+            background-color: orange;
+            color: honeydew;
+            font-family: Bahnschrift;
+            font-style: italic;
+            font-size: 20px;
+            border:dashed;
+        }
+
+        .g{
+            font-family:Magneto;
+            font-size:20px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"><b>Hello World</b></p>
+    <button id="b1"onclick="f1()">click </button>
+
+    <script>
+        function f1() {
+            document.getElementById("p1").style.backgroundColor = "aqua";
+            document.getElementById("p1").style.borderStyle = "solid";
+            document.getElementById("p1").style.fontStyle = "italic";
+            //document.getElementById("p1").style.fontSize = "20px";
+            //document.getElementById("p1").style.fontFamily = "Times New Roman";
+            document.getElementById("p1").className = "g";
+           
+        }
+       
+        
+    </script>
+
+    <h1 id="h1">Programming is a fun</h1>
+    <h2 id="h2">This is Crazy</h2>
+    <h3 id="h3">Hey...This is Crazy</h3>
+    <h4 id="h4">We are Graduates</h4>
+    <h5 id="h5">Wlcm to JavaScript</h5>
+    <h6 id="h6">Good N8 Folks</h6>
+    <button id="b2" onclick="f2()" >Click here</button>
+    <script>
+        function f2() {
+
+            document.getElementById("b1").disabled = true;
+            alert("button disabled");
+            document.getElementById("h1").className = "a";
+            document.getElementById("h2").className = "b";
+            document.getElementById("h3").className = "c";
+            document.getElementById("h4").className = "d";
+            document.getElementById("h5").className = "e";
+            document.getElementById("h6").className = "f";
+            document.getElementById("b2").disabled = true;
+            
+        }
+      
+    </script>
+    
+</body>
+</html>

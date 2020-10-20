@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>This is 3rd web tab</title>
+</head>
+<body>
+    <p>Thsi is demo about EventListener() method on window object</p>
+    <p>try resizing the browser (ctrl + " + button")window by this  resize event occurs</p>
+    <p id="demo"></p>
+
+    <p>This is demo about how to paass paramters values when using event listener method</p>
+    <p>Click the button to perform mathematics operations below</p>
+
+    <button id="b1">Additon</button>
+    <button id="b2">Multiplication</button>
+    <button id="b3">Division</button>
+    <button id="b4">Subtraction</button>
+    <p id="p1"></p>
+
+    <script>
+        var x = 20;
+        var y = 10;
+
+        document.getElementById("b1").addEventListener("click", function () {
+            addition(x, y);
+
+        });
+
+        document.getElementById("b2").addEventListener("click", function () {
+            multiplication(x, y);
+
+        });
+
+        document.getElementById("b3").addEventListener("click", function () {
+            division(x, y);
+
+        });
+
+
+        document.getElementById("b4").addEventListener("click", function () {
+            subtraction(x, y);
+
+        });
+
+        function addition(c, d) {
+            var z =c+d;
+            document.getElementById("p1").innerHTML = "addition of 10 and 20 : " + z;
+        }
+
+        function multiplication(c, d) {
+            var z1 = "Multiplication of 20 aand 10 :" + " " + c * d;
+            document.getElementById("p1").innerHTML = z1;
+        }
+
+        function division(c, d) {
+            var z2 = "Division of 20 and 10 :"+ " " + c / d;
+            document.getElementById("p1").innerHTML = z2;
+        }
+
+        function subtraction(c, d) {
+            var z3 =  c - d;
+            document.getElementById("p1").innerHTML = "subtraction of 10 and 20 : " + z3;
+        }
+
+
+
+
+    </script>
+    <script>
+        window.addEventListener("reload", function () {
+            document.getElementById("demo").innerHTML = HTMLTimeElement();
+        });
+    </script>
+</body>
+</html>

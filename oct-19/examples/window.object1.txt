@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Click on the button below. The input field will tell you when two, four, and six seconds have passed.</p>
+
+    <button onclick="timedText()">Display timed text</button>
+    <input type="text" id="txt">
+    <script>
+        function timedText() {
+            var x = document.getElementById("txt");
+            setTimeout(function () { x.value = "2 seconds" }, 2000);
+            setTimeout(function () { x.value = "4 seconds" }, 4000);
+            setTimeout(function () { x.value = "6 seconds" }, 6000);
+        }
+    </script>
+
+    <p>Click the button to display the URL of the document.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.URL;
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</body>
+</html>

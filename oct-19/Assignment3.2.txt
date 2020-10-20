@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <iframe id="myFrame" src="https://www.tutorialrepublic.com/javascript-tutorial/" width="600" height="900"></iframe>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("myFrame").addEventListener("load", myFunction);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Iframe is loaded.";
+        }
+    </script>
+    <iframe id="f1" src="https://www.tutorialrepublic.com" width="600" height="600">Welcome to Hoame page</iframe>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("f1").addEventListener("unload", myFunction1);
+
+        function myFunction1() {
+            document.getElementById("demo1").innerHTML = "Iframe is unloaded.";
+        }
+    </script>
+
+ <iframe id="f1" src="https://www.tutorialrepublic.com" width="600" height="600">Welcome to Hoame page</iframe>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("f1").addEventListener("unload", myFunction1);
+
+        function myFunction1() {
+            document.getElementById("demo1").innerHTML = "Iframe is unloaded.";
+        }
+    </script>
+
+
+
+</body>
+</html>
