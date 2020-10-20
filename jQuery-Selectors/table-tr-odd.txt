@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            $("tr:odd").css("background-color", "pink");
+        });
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Employee_Name</th>
+            <th>Designation</th>
+        </tr>
+        <tr>
+            <td>Prathyusha</td>
+            <td>Sales</td>
+        </tr>
+        <tr>
+            <td>SkFirdos</td>
+            <td>HR</td>
+        </tr>
+        <tr>
+            <td>Ramya</td>
+            <td>TechnicalLead</td>
+        </tr>
+        <tr>
+            <td>Sravani</td>
+            <td>Technitian</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

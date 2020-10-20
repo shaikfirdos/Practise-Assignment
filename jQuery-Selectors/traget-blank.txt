@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        $(document).ready(function () {
+            $("#b2").click(function () {
+                $("a[target='_blank']").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div>
+        <h1><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">Instagram Login</a></h1><!--blank is used to open the link new tab in browser-->
+        <h1><a href="https://touch.facebook.com/">Facebook login</a></h1>
+
+        <button id="b2">Click me</button><!--hide target selector-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("img").load(function () {
+                document.write("Image loaded.");
+                  });
+              });
+    </script>
+</head>
+<body>
+    <img src="a3.gif"  width="304" height="236">
+
+    
+</body>
+</html>
