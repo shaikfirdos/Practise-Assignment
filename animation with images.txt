@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#d1").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '194px',
+                    width: '200px'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#b2").click(function () {
+                $("#d2").animate({
+                    height: 'toggle'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#b3").click(function () {
+                var div = $("#d3");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="b1">Start Animation</button>
+    <button id="b2">Start Animation</button>
+    <button id="b3">Start Animation</button>
+    <br />
+
+
+    <div id="d1" style="background-image:url(a2.jpg);height:400px;width:400px;position:absolute;"></div><br />
+    <div id="d2" style="background-image:url(a1.jpg);height:194px;width:200px;position:absolute;"></div><br />
+    <div id="d3" style="background-image:url(a1.jpg);height:100px;width:100px;position:absolute;"></div><br />
+
+
+
+</body>
+</html>

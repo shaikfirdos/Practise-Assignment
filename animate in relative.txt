@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Relative</title>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#d1").animate({ left: '150px' });
+                $("#p1").animate({ left: '250px' });
+                $("#h1").animate({ left: '350px' });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#b3").click(function () {
+                $("#d3").animate({ top: '50px' });
+                $("#p3").animate({ top: '200px' });
+                $("#h3").animate({ top: '400px' });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="b1">Start Animation</button>
+    <button id="b3">Start Animation top</button><br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="d1" style="background-color:purple;width:160px;height:150px;position:relative">hai</div>
+    <p id="p1" style="background-color:blue;width:160px;height:150px;position:relative">hello</p>
+    <h1 id="h1" style="background-color:aqua;width:160px;height:150px;position:relative">folks</h1>
+
+    <div id="d3" style="background-color:purple;width:160px;height:150px;position:relative">hai</div>
+    <p id="p3" style="background-color:blue;width:160px;height:150px;position:relative">hello</p>
+    <h1 id="h3" style="background-color:aqua;width:160px;height:150px;position:relative">folks</h1>
+
+
+</body>
+</html>

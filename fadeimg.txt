@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#i1").fadeIn();
+                $("#i2").fadeIn("slow");
+                $("#i3").fadeIn(3000);
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#b2").click(function () {
+                $("#i4").fadeOut();
+                $("#i5").fadeOut("slow");
+                $("#i6").fadeOut(3000);
+
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#b3").click(function () {
+                $("#i7").fadeToggle();
+                $("#i8").fadeToggle("slow");
+                $("#i9").fadeToggle("3000");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#i10").fadeTo("slow", 0.15);
+                $("#i11").fadeTo("slow", 0.4);
+                $("#i12").fadeTo("slow", 0.6);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="b1">Click to fade boxes</button><br><br>
+
+    <img id="i1" src="a2.jpg" style="width:150px;height:180px;display:none;" /><br />
+    <img id="i2" src="a1.jpg" style="width:150px;height:180px;display:none;" /><br />
+    <img id="i3" src="a2.jpg" style="width:150px;height:180px;display:none;" /><br />
+
+    <button id="b2">click to see fade out</button><br /><br />
+
+    <img id="i4" src="a2.jpg" style="width:150px;height:180px;" /><br />
+    <img id="i5" src="a1.jpg" style="width:150px;height:180px;" /><br />
+    <img id="i6" src="a2.jpg" style="width:150px;height:180px;" /><br />
+
+    <button id="b3">Click to fade boxes</button><br><br>
+
+    <img id="i7" src="a2.jpg" style="width:150px;height:180px;display:none;" /><br />
+    <img id="i8" src="a1.jpg" style="width:150px;height:180px;display:none;" /><br />
+    <img id="i9" src="a2.jpg" style="width:150px;height:180px;display:none;" /><br />
+
+    <button id="b4">Click to fade boxes</button><br><br>
+
+    <img id="i10" src="a2.jpg" style="width:150px;height:180px;" /><br />
+    <img id="i11" src="a1.jpg" style="width:150px;height:180px;" /><br />
+    <img id="i12" src="a2.jpg" style="width:150px;height:180px;" /><br />
+
+</body>
+</html>
