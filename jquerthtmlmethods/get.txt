@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                alert("Text: " + $("#p1").text());
+            });
+            $("#b2").click(function () {
+                alert("HTML: " + $("#p1").html());
+            });
+            $("#b3").click(function () {
+                alert("Value: " + $("#p2").val());
+            });
+            $("#b4").click(function () {
+                alert($("#a1").attr("href"));
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <p id="p1">This is some <b>bold</b> text in a paragraph.</p>
+    <p>Name:<input type="text" id="p2" /></p>
+    <p><a href="https://www.google.com/" id="a1">Google.com</a></p>
+    <button id="b1">Show Text</button>
+    <button id="b2">Show HTML</button>
+    <button id="b3">Show Value</button>
+    <button id="b4">Show href Value</button>
+
+</body>
+</html>

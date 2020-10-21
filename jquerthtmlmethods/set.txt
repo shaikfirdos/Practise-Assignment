@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#h1").text("Hai Girls!!!!!");
+            });
+            $("#b2").click(function () {
+                $("#h2").html("<i>Shaik Firdos</i>");
+            });
+            $("#b3").click(function () {
+                $("#h3").html("Phinese&Ferb");
+            });
+            $("#b4").click(function () {
+                $("#h4").val("Tom&Jerry");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#b5").click(function () {
+                $("#p1").text(function (i, oldText) {
+                    return "Old text :" + oldText + " New text : Hlo world ( index : " + i + ")";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="h1">Programming is fun</h1>
+    <h2 id="h2">Programmers are annovative to new things</h2>
+    <h3 id="h3">we are crazy</h3>
+    <h1>Input:<input type="text" id="h4" /></h1>
+    <button id="b1">set Text</button>
+    <button id="b2">set HTML</button>
+    <button id="b3">set HTML</button>
+    <button id="b4">set Value</button>
+
+    <p id="p1">Thi is <b>a</b> Paragraph</p>
+    <button id="b5">Show old/new Text</button>
+</body>
+</html>
