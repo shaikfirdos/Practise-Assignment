@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>IIS Webserver</title>
+<style>
+table,th,td{
+border:1px solid black;
+</style>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#p1").fadeIn();
+$("#p2").fadeIn("slow");
+$("#p3").fadeIn(600);
+});
+});
+</script>
+</head>
+<body>
+<h1>Programming is fun<h1>
+<h2>Progrmmer is eager to learn new things</h2>
+<h3>Awww..ts wierd</h3>
+<h4>hey!!!!!!....</h4>
+<h1><a href="https://github.com/">Click to acces github</a><h1><br/>
+<img src="https://all-free-download.com/wallpapers/download/fire_autumn_wallpaper_autumn_nature_wallpaper_1452.html" width="460" height="345"><br/>
+
+<button>click me</button>
+<br/>
+<p id="p1" style="background-color:greenyellow;height:180px;width:180px;display:none">Its Crazy</p><br/>
+<p id="p2" style="background-color:cyan;height:180px;width:180px;display:none">Its Crazy</p><br/>
+<p id="p3" style="background-color:yellow;height:180px;width:180px;display:none">Its Crazy</p><br/>
+
+<table>
+<tr>
+<th>EmployeeId</th>
+<th>EmployeeName</th>
+<th>EmployeeDesignation</th>
+</tr>
+<tr>
+<td>001</td>
+<td>Firdos</td>
+<td>Technical lead</td>
+</tr>
+<tr>
+<td>002</td>
+<td>Ramya</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>002</td>
+<td>Prathyusha</td>
+<td>IT</td>
+</tr>
+</table>
+
+
+</body>
+</head>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Page for virtual directory</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<h2>Programming is fun</h2>
+</body>
+</html>
+
+
