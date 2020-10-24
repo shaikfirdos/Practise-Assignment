@@ -1,0 +1,63 @@
+SOURCE CODE[ASPX]:
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:RadioButton ID="rdbtn1" runat="server" ForeColor="Red" GroupName="This is Asp.net Webform" Text="Red" /><br />
+            <asp:RadioButton ID="rdbtn2" runat="server" ForeColor="Blue" GroupName="This is Asp.net Webform"  Text="Blue"  /><br />
+            <asp:RadioButton ID="rdbtn3" runat="server" ForeColor="#00CC00" GroupName="This is Asp.net Webform"  Text="Green"/><br />
+
+        </div>
+
+        <p>
+           <asp:Button ID="b1" runat="server" Text="selected" OnClick="b1_Click" />
+        </p>
+
+       
+    </form>
+</body>
+</html>
+
+
+
+DESIGN[aspx.cs]:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Default2 : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+
+    protected void b1_Click(object sender, EventArgs e)
+    {
+        if (rdbtn1.Checked)
+        {
+            Response.Write("This is red color");
+        }
+        else if (rdbtn2.Checked)
+        {
+            Response.Write("This is blue color");
+        }
+        if (rdbtn3.Checked)
+        {
+            Response.Write("This is green color");
+        }
+       
+    }
+}

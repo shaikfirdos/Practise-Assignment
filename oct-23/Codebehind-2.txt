@@ -1,0 +1,49 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="web2.WebForm4" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" /><br />
+                <asp:Button ID="b1" runat="server" Width="79px" Text="Clickme" ForeColor="YellowGreen" OnClick="b1_Click" /><!--ASP Tag-->
+        </div>
+    </form>
+</body>
+</html>
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace web2
+{
+    public partial class WebForm4 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void b1_Click(object sender, EventArgs e)
+        {
+
+            Response.Write("Button is working fine"+"<br/>");
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Response.Write("Hey" + " " + TextBox1.Text + " " +"Welcome to asp.net" + "<br/>");
+            
+                
+       }
+    }
+}

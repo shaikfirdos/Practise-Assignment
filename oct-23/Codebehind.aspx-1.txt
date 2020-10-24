@@ -1,0 +1,31 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Codebehind.aspx.cs" Inherits="Codebehind" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <asp:Label  ID="label2" runat="server" Text="Name" ForeColor="#9900CC" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="None" Font-Size="15px"/>
+            <asp:TextBox ID="TextBox2" runat="server"  style="margin-left: 21px" Width="169px" OnTextChanged="TextBox2_TextChanged" /><br /><br/>
+            <asp:Label  ID="label3" runat="server" Text="Age" ForeColor="#9900CC" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="None" Font-Size="15px"/>
+            <asp:TextBox ID="TextBox3" runat="server" style="margin-left: 32px" Width="166px" OnTextChanged="TextBox3_TextChanged" /><br /><br/>
+            <asp:Label ID="label4" runat="server" Text="Gender" ForeColor="#9900CC" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="None" Font-Size="15px"/><br />
+            <asp:RadioButton ID="RadioButton1" runat="server" Text="Male" GroupName="Gender" OnCheckedChanged="RadioButton1_CheckedChanged" />
+            <br />
+            <asp:RadioButton ID="RadioButton2" runat="server" Text="Female" GroupName="Gender" OnCheckedChanged="RadioButton2_CheckedChanged" />
+            <br />
+            <asp:Label ID="label1" runat="server" Text="YourCity " ForeColor="#9900CC" BackColor="#FFFFCC" BorderColor="Black" BorderStyle="None" Font-Size="15px"/>
+            <asp:TextBox ID="TextBox1" runat="server"  style="margin-left: 11px" Width="163px" OnTextChanged="TextBox1_TextChanged" /><br /><br/>
+       </div>
+        <p>
+            <asp:Button ID="b1" runat="server" Text="Submit"/>
+        </p>
+        
+    </form>
+</body>
+</html>
