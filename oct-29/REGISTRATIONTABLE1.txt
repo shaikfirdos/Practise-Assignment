@@ -1,0 +1,10 @@
+CREATE TABLE [dbo].[REGISTRATIONTABLE1] (
+    [Id]              INT           NULL,
+    [UserName]        NVARCHAR (50) NULL,
+    [EmailAddress]    NVARCHAR (50) NULL,
+    [Password]        NVARCHAR (50) NULL,
+    [ConfirmPassword] NVARCHAR (50) NULL,
+    [Gender]          NCHAR (10)    NULL,
+    [City]            NVARCHAR (50) NULL
+);
+
