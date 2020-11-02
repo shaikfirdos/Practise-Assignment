@@ -1,0 +1,8 @@
+CREATE TABLE ListViewTable
+(
+	[StudentID] INT NULL, 
+    [StudentName] NVARCHAR(50) NULL, 
+    [FatherName] NVARCHAR(50) NULL, 
+    [StudentMblNo] BIGINT NULL, 
+    [City] NVARCHAR(50) NULL 
+)

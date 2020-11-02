@@ -1,0 +1,11 @@
+CREATE TABLE StudentTable
+(
+	[StudentID] NCHAR(10) NOT NULL, 
+    [StudentName] NVARCHAR(50) NULL, 
+    [StudentEmailID] NVARCHAR(50) NULL, 
+    [StudentMblNo] NVARCHAR(50) NULL, 
+    [StudentGender] NCHAR(10) NULL, 
+    [StudentAddress] NVARCHAR(50) NULL, 
+    [StudentCity] NVARCHAR(50) NULL, 
+    [StudentImg] NVARCHAR(50) NULL 
+)

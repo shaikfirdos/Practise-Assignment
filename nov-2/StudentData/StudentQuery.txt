@@ -1,0 +1,1 @@
+insert into StudentTable values('17NM5A0422','Prathyusha','prathyuv@gmail.com',342567819,'Female','Dno:11-55-10,Duvvada,Kurmanapalem','Visakhapatnam','~/a5.jpg/')

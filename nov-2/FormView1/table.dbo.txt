@@ -1,0 +1,8 @@
+CREATE TABLE EmployeeTable
+(
+	[EmpID] INT NULL, 
+    [EmpName] NVARCHAR(50) NULL, 
+    [EmpDesignation] NVARCHAR(50) NULL, 
+    [EmpSalary] BIGINT NULL, 
+    [EmpMblNo] BIGINT NULL 
+)
