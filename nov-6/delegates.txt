@@ -1,0 +1,27 @@
+class list {
+    private items: any[];
+
+    constructor() {
+        this.items = [];
+
+    }
+    add<T>(item1: T): void {//add the values from list
+        this.items.push(item1);
+    }
+    get<F>(index: number): F {//get the values from list
+        return this.items[index];
+    }
+}
+let stringlist = new list();
+stringlist.add("name");
+stringlist.add("age");
+console.log(stringlist.get<string>(0).substr(0, 2));
+console.log(stringlist.get<string>(1).substr(0, 3));
+
+let numlist = new list();
+numlist.add(123);
+numlist.add(1);
+console.log(numlist.get<number>(0));
+console.log(numlist.get<number>(1));
+
+console.log('Hello world');
