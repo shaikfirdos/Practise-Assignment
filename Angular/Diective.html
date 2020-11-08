@@ -1,0 +1,51 @@
+<h1 style="background-color:chartreuse">It is very irritatble</h1>
+<h2 style="color:coral">Are you behave like a idiot</h2>
+<h3>No one can beat u</h3>
+<h4>Happy Weekend</h4>
+<h5>Hey!!!!!!Its strange</h5>
+<h6>Finally got it</h6>
+<p>This is Angular output</p>
+<p>Hey!!!! why You not responding me</p>
+<div>
+  LIST OF VEGETABLES
+  <ul *ngFor= "let item of vegetables">
+   
+    <p>{{item}}</p>
+    
+  </ul>
+
+<div class='panel panel-primary'>
+  <div class='panel-heading'>
+    {{subtitle}}
+  </div>
+  <div class='panel-body'>
+    <div class='table-responsive'>
+      <table class='table'>
+        <thead>
+          <tr >
+            <th >RegdId</th>
+
+            <th >Name</th>
+
+            <th >Trade</th>
+          </tr>
+        </thead>
+        <tbody>  
+          <tr *ngFor="let data of Student1;">  
+
+              <td>{{data.RegdId}}</td>  
+
+              <td>{{data.Name}}</td>  
+
+              <td>{{data.Trade}}</td>  
+              
+          </tr>  
+      </tbody>  
+      </table>
+
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
