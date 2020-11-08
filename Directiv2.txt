@@ -1,0 +1,18 @@
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let cartoon of Cartoons;" [value]="cartoon.Priority">{{cartoon.Priority}}</option>
+</select>
+<div class='row' [ngSwitch]="selectedValue">
+  <div *ngSwitchCase="'Doraemon'">Priority one is pressed</div>
+  <div *ngSwitchCase="'Shinchan'">Priority two is pressed</div>
+  
+  <div *ngSwitchDefault>Default Option</div>  
+</div>
+
+Cartoons: cartoon[] =[{Priority:'Doraemon',val:1},{Priority:'Shinchan',val:2},{Priority:'Phinese&Ferb',val:3}];
+  selectedValue:string='Doraemon';
+
+class cartoon{
+  Priority:string;
+  val:number;
+}
+
