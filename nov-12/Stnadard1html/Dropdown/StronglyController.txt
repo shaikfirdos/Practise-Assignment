@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using MVC_Helpers.Models;
+
+namespace MVC_Helpers.Controllers
+{
+    public class StronglyController : Controller
+    {
+        // GET: Strongly
+        public ActionResult Index()
+        {
+            Employee emp = new Employee()//Instance created for the model class - employee
+            {
+                Name = "Shaik Firdos",
+                Address = "Viskhapatnam",
+                is_Employee = true
+            };
+            return View(emp);
+        }
+        [HttpPost]//Its holds the information what we give info in server
+
+        public ActionResult Index(Employee emp)
+        {
+            return View();
+            
+        }
+        public ActionResult Dropdown()
+        {
+            return View();
+        }
+    }
+}

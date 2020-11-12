@@ -1,0 +1,71 @@
+@using StudentRegistration.Models
+@model Studentdata
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+  <style>
+      .container {
+          margin: 150px auto;
+          width: 400px;
+          height: 400px;
+          font-family: Cambria;
+          font-size: large;
+         
+          background-color: lavenderblush;
+          color: black;
+      }
+      
+    
+  </style>
+</head>
+<body>
+    <div class="container">
+      
+            @using (Html.BeginForm("MyForm"))
+            {
+                <label>Studentname:@Html.TextBoxFor(c => c.Username)</label>
+                <br />
+                <br />
+                <label>Password:  @Html.PasswordFor(c => c.Password)  </label>
+                <br />
+                <br />
+                <label>Gender: </label>
+                <label>Male: @Html.RadioButton("Gender", "Male", new { id = "Male" })</label>
+                <label>Female: @Html.RadioButton("Gender", "Female", new { id = "Female" })</label>
+                <br />
+                <br />
+                <label>Address : @Html.TextAreaFor(c => c.Address)</label>
+                <br />
+                <br />
+                <label>Hobbies:</label><br />
+                <label>Dancing @Html.CheckBox("Dancing")</label><br />
+                <label>Singing @Html.CheckBox("Singing")</label><br />
+                <label>Crafts @Html.CheckBox("Crafts")</label><br />
+                <label>Dramas @Html.CheckBox("Dramas")</label><br />
+                <br />
+                <br />
+                <label>
+                    Skills: @Html.DropDownList("Skills", new List<SelectListItem>
+             {new SelectListItem{Text="Choose your Skills"},
+              new SelectListItem{Text="IOt",Value="1" },
+               new SelectListItem{Text="C",Value="2" },
+               new SelectListItem{Text="ArtificialIntelligence",Value="3" }
+         })
+                </label>
+                <br />
+                <br />
+                <input type="submit" value="Register" />
+
+
+            }
+        </div>
+    
+</body>
+</html>

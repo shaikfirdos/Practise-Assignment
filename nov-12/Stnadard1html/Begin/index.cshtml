@@ -1,0 +1,28 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("MyForm"))
+        {
+            @Html.Label("UserName:")<br />
+            @Html.TextBox("username")<br /><br />
+            @Html.Label("Address:")<br />
+            @Html.TextArea("textarea")<br /><br />
+            
+            <input type="submit" value="Click me" />
+        }
+
+
+    </div>
+</body>
+</html>

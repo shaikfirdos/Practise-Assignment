@@ -1,0 +1,24 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dropdown</title>
+</head>
+<body>
+    <div> 
+        @Html.DropDownList("Cartoon", new List<SelectListItem>
+   {
+       new SelectListItem{Text="Shinchan", Value="1"},
+       new SelectListItem{Text="Doraemon", Value="2"},
+       new SelectListItem{Text="Phinese&ferb", Value="3"},
+       new SelectListItem{Text="KickButtowski", Value="4"}
+   },"Favourite Cartoon")
+    </div>
+</body>
+</html>
