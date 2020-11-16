@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MyApp.Model;
+
+namespace DB_FILES.DbOperations
+{
+    public class EmployeesRepository
+    {
+
+        public int AddEmployee(Employeee model)
+        {
+            using (var context = new FirdosEntities())
+            {
+                emp_1 em1 = new emp_1()
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email,
+                    Code = model.Code
+                };
+
+                context.emp_1.Add(em1);
+                context.SaveChanges();
+                return em1.Id;
+            }
+        }
+
+     
+
+    }
+
+
+
+
+
+
+
+
+        //public List<Employeee> GetAllEmployees()
+        //{
+        //    using (var context = new FirdosEntities())
+        //    {
+        //        var result = context.emp_1.Select(x => new Employeee()
+        //        {
+        //            Id = x.Id,
+        //            AddressId = x.AddressId,
+        //            Code = x.Code,
+        //            Email = x.Email,
+        //            FirstName = x.FirstName,
+        //            LastName = x.LastName
+        //        })
+        //        .ToList();
+        //        return result;
+        //    }
+        //}}
+    
+
+}
