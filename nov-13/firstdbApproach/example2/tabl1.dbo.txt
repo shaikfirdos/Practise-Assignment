@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[Table1] (
+    [Id]       INT           NOT NULL,
+    [Name]     NVARCHAR (50) NULL,
+    [Location] NVARCHAR (50) NULL,
+    [FavPlace] NVARCHAR (50) NULL,
+    [FavChoco] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

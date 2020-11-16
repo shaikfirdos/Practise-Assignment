@@ -1,0 +1,3 @@
+<connectionStrings>
+    <add name="EmployeeConnection" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Employee1.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>

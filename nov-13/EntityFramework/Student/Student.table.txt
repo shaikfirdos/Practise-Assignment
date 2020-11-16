@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[StudentTable1] (
+    [id]          INT            IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (MAX) NULL,
+    [Age]         INT            NOT NULL,
+    [PhoneNumber] INT            NOT NULL,
+    [City]        NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_dbo.StudentTable1] PRIMARY KEY CLUSTERED ([id] ASC)
+);
+

@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[Table] (
+    [Id]    INT           NOT NULL,
+    [Order] NVARCHAR (50) NULL,
+    [Item]  NVARCHAR (50) NULL,
+    [Price] BIGINT        NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

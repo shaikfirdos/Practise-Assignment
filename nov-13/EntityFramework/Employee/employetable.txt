@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[EmployeeTable1] (
+    [Empid]          INT            IDENTITY (1, 1) NOT NULL,
+    [EmpName]        NVARCHAR (MAX) NULL,
+    [EmpDesignation] NVARCHAR (MAX) NULL,
+    [EmpAge]         INT            NOT NULL,
+    [EmpLocation]    NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_dbo.EmployeeTable1] PRIMARY KEY CLUSTERED ([Empid] ASC)
+);
+

@@ -1,0 +1,20 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+       <h1>This is index method in Data Controller</h1>
+        @Html.ActionLink("Click Here","About")<br />@*calling the action method within same controller*@
+        @Html.ActionLink("Click Here","Index","Data1")<br />@*calling the one controller to another controller*@
+    </div>
+</body>
+</html>

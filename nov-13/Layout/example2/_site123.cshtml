@@ -1,0 +1,53 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index Page</title>
+    @RenderSection("headSection",required:false) @*required false means its an optional*@ 
+</head>
+<body>
+    <div>
+        <table border="2" width="100%" align="center" cellspacing="5" cellpadding="5">
+            <tr style="background-color:darkslategray; color:white;text-align:center">
+                <td colspan="2">DXC | Hyderabad</td> @*Header*@
+            </tr>
+            <tr height="500px">
+                <td width="250px">
+                    @*Column -1*@
+                    <ul>
+                        <li>@Html.ActionLink("Index", "Index", "Firdos")</li>
+                        <li>@Html.ActionLink("Index1", "Index1", "Firdos")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Firdos")</li>
+
+                    </ul>
+                </td>
+                <td width="550">
+                    @*Column-2*@
+                    <div style="height:400px">
+                        @RenderBody() @*it is a function , that specify the page contains must be rendered*@
+
+                    </div>
+                    <div style="height:100px">
+                        @RenderSection("AdsSection",required:false)
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color:darkolivegreen;color:white;text-align:center">
+                    @*footer*@
+                    &copy; Copyright 2020      <br />
+                    Faculty | Courses | Projects
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_site.cshtml";
+}
+
+<h2>Contact</h2>
+
+<address>
+    <p>Contact in: shaikfirdos1998@gmail.com</p> 
+</address>
+
+

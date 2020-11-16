@@ -1,0 +1,52 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{ Html.BeginForm("Index", "Employee");}
+        <div>
+            <label>EmployeeId: @Html.TextBox("textbox1")</label>
+        </div>
+        <div>
+            <label>EmployeeName: @Html.TextBox("textbox2")</label>
+        </div>
+        <div>
+            <label>Password: @Html.Password("password1")</label>
+        </div>
+        <div>
+            <label>ConfirmPassword: @Html.Password("password1")</label>
+        </div>
+        <div>
+            <div><label> Male: @Html.RadioButton("Gender", "Male", true, new { id = "Male" })</label></div>
+            <div><label>Female:@Html.RadioButton("Gender", "Female", true, new { id = "Female" })</label></div>
+        </div>
+        <div>
+            <label>Address: @Html.TextArea("address")</label>
+        </div>
+        <div>
+            @Html.DropDownList("Department", new List<SelectListItem>
+       {
+           new SelectListItem{Text="IT", Value="1"},
+           new SelectListItem{Text="PayOff", Value="2"},
+           new SelectListItem{Text="Catw", Value="3"},
+           new SelectListItem{Text="Technical", Value="4"}
+       },"Select Department")
+        </div>
+        <div>
+            <label>Accepy Terms & Conditon: @Html.CheckBox("checkbox1")</label>
+        </div>
+
+        <input type="submit" value="Click me" />
+    </div>    
+</body>
+</html>
+     

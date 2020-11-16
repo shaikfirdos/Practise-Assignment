@@ -1,0 +1,33 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        <h1>This is About method in Data controller</h1>
+    </div>
+    <div>
+        <label>List of words</label>
+        @MyListHelper(new string[] { "Happy","Beleive","Hope" })
+    </div>
+    <div>
+        @helper MyListHelper(string[] str)
+        {
+            <oL>
+                @foreach (var i in str)
+                {
+                    <li>@i</li>
+                }
+            </oL>
+        }
+    </div>
+</body>
+</html>

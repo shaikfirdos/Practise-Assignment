@@ -1,0 +1,12 @@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_site123.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    DXC Technology in India is a hotbed of innovation and technical expertise and a gold standard for process maturity and quality. Our operations are the company’s largest globally, employing high-caliber technology professionals focused on helping customers address their core challenges and take advantage of market opportunities.
+
+</p>
+

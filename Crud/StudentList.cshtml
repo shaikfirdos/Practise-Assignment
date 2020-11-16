@@ -1,0 +1,32 @@
+@model List<CRUDPROJECT.Context.StudentTable123>
+@{
+    ViewBag.Title = "StudentList";
+}
+
+<h2>StudentList</h2>
+<table class="table table-hover">
+    <tr>
+        <th>Fistname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)//Model Keyword is automatically bind the data from Listr
+    {
+        <tr>
+            <td>@item.Fname</td>
+            <td>@item.Lname</td>
+            <td>@item.Email</td>
+            <td>@item.Mobile</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="@Url.Action("Student", new {@item.Id,@item.Fname,@item.Lname,@item.Email,@item.Mobile,@item.Description })"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="@Url.Action("Delete",new {@item.Id})"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
