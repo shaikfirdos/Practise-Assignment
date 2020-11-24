@@ -1,0 +1,7 @@
+SELECT TOP (1000) [AccountId]
+      ,[AccountHoldername]
+      ,[Address]
+      ,[MobileNumber]
+      ,[EmailId]
+      ,[Password]
+  FROM [Bank].[dbo].[RegistrationTable123]
